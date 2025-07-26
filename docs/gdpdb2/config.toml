@@ -1,0 +1,12 @@
+baseURL = '/'
+languageCode = 'en-us'
+title = 'gdpdb2'
+theme = 'book'
+
+[params]
+  BookTheme = "light"
+  BookToC = true
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
