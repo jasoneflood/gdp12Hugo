@@ -2,9 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/chapter1/</loc>
+    <loc>http://localhost:1313/part-1/intro/</loc>
   </url><url>
-    <loc>http://localhost:1313/chapter1/intro/</loc>
+    <loc>http://localhost:1313/part-1/</loc>
+  </url><url>
+    <loc>http://localhost:1313/part-2/</loc>
+  </url><url>
+    <loc>http://localhost:1313/part-3/</loc>
+  </url><url>
+    <loc>http://localhost:1313/part-4/</loc>
+  </url><url>
+    <loc>http://localhost:1313/part-5/</loc>
+  </url><url>
+    <loc>http://localhost:1313/part-6/</loc>
+  </url><url>
+    <loc>http://localhost:1313/part-2/overview/</loc>
+  </url><url>
+    <loc>http://localhost:1313/part-4/overview/</loc>
+  </url><url>
+    <loc>http://localhost:1313/part-3/overview/</loc>
+  </url><url>
+    <loc>http://localhost:1313/part-5/overview/</loc>
+  </url><url>
+    <loc>http://localhost:1313/part-6/overview/</loc>
   </url><url>
     <loc>http://localhost:1313/</loc>
   </url><url>

@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  Data Discovery &amp; Classification (Discover and Classify)
+  #
+
+Core Purpose: Establish visibility into where sensitive or regulated data resides—across structured databases and unstructured data (files, flat files, etc.) in on‑prem and cloud environments .
+Supported Platforms: Covers major environments such as AWS RDS (MySQL, PostgreSQL, SQL Server, Oracle), MongoDB, IBM Db2 (Linux/UNIX/Windows, z/OS, i), Informix, SAP HANA, Teradata, Netezza, FTP/SMB/HTTP repositories, and more.
+
+  Classification Workflow:
+  #
+
+
+Use Guardium appliance to connect via JDBC to data sources
+Enumerate tables, views, synonyms
+Sample data and match against classification rules (regex, exact-match, metadata)
+Trigger rule-specific actions (e.g. tagging, alerts, reporting)
+Repeat across defined data sources
+
+
+  Rule Builder Tools: Use either:
+  #
+
+
+End-to-end wizard (simplified, quicker setup)
+Full Classification Policy Builder (max flexibility: define sources, rules, scheduling, actions)
+
+
+  Accuracy &amp; Machine Learning:
+  #
+
+Guardium Discover and Classify delivers ~98.6% accuracy on structured data and ~100% on unstructured, often enhanced by AI/ML pattern detection .">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/part-3/overview/">
+  <meta property="og:site_name" content="GDP DB2 AWS">
+  <meta property="og:title" content="Data Discovery & VA">
+  <meta property="og:description" content="Data Discovery &amp; Classification (Discover and Classify)#Core Purpose: Establish visibility into where sensitive or regulated data resides—across structured databases and unstructured data (files, flat files, etc.) in on‑prem and cloud environments .
+Supported Platforms: Covers major environments such as AWS RDS (MySQL, PostgreSQL, SQL Server, Oracle), MongoDB, IBM Db2 (Linux/UNIX/Windows, z/OS, i), Informix, SAP HANA, Teradata, Netezza, FTP/SMB/HTTP repositories, and more.
+Classification Workflow:#Use Guardium appliance to connect via JDBC to data sources Enumerate tables, views, synonyms Sample data and match against classification rules (regex, exact-match, metadata) Trigger rule-specific actions (e.g. tagging, alerts, reporting) Repeat across defined data sources Rule Builder Tools: Use either:#End-to-end wizard (simplified, quicker setup) Full Classification Policy Builder (max flexibility: define sources, rules, scheduling, actions) Accuracy &amp; Machine Learning:#Guardium Discover and Classify delivers ~98.6% accuracy on structured data and ~100% on unstructured, often enhanced by AI/ML pattern detection .">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="part-3">
+<title>Data Discovery &amp; VA | GDP DB2 AWS</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/part-3/overview/">
+<link rel="stylesheet" href="/book.min.d5e59cb0aa8d22a5813c62cd5e25d3d172489a369c61dc3f622ee96ae1ebb457.css" integrity="sha256-1eWcsKqNIqWBPGLNXiXT0XJImjacYdw/Yi7pauHrtFc=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.74c15aaed6b51db6b6eb0d414997ed918d42c87ca2aea0b1073b4dcac9193d3b.js" integrity="sha256-dMFarta1Hba26w1BSZftkY1CyHyirqCxBztNyskZPTs=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>GDP DB2 AWS</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Part 1</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-1/intro/" class="">Introduction &amp; Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-1/activity/" class="">Activity</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Part 2</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-2/overview/" class="">DAM &amp; Policy Creation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-2/activity/" class="">Activity</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Part 3</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-3/overview/" class="active">Data Discovery &amp; VA</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-3/activity/" class="">Activity</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Part 4</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-4/overview/" class="">Access Controls &amp; Reports</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-4/activity/" class="">Activity</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Part 5</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-5/overview/" class="">Integrations &amp; Automation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-5/activity/" class="">Activity</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Part 6</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-6/overview/" class="">Final Considerations</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Data Discovery &amp; VA</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#data-discovery--classification-discover-and-classify">Data Discovery &amp; Classification (Discover and Classify)</a>
+      <ul>
+        <li><a href="#classification-workflow">Classification Workflow:</a></li>
+        <li><a href="#rule-builder-tools-use-either">Rule Builder Tools: Use either:</a></li>
+        <li><a href="#accuracy--machine-learning">Accuracy &amp; Machine Learning:</a></li>
+        <li><a href="#deliverables">Deliverables:</a></li>
+      </ul>
+    </li>
+    <li><a href="#vulnerability-assessment-guardium-va">Vulnerability Assessment (Guardium VA)</a></li>
+    <li><a href="#synergy-between-discovery--va">Synergy Between Discovery &amp; VA</a></li>
+    <li><a href="#best-practices">Best Practices</a></li>
+    <li><a href="#why-it-matters">Why It Matters</a></li>
+    <li><a href="#community-insights">Community Insights</a></li>
+    <li><a href="#summary">Summary</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h2 id="data-discovery--classification-discover-and-classify">
+  Data Discovery &amp; Classification (Discover and Classify)
+  <a class="anchor" href="#data-discovery--classification-discover-and-classify">#</a>
+</h2>
+<p>Core Purpose: Establish visibility into where sensitive or regulated data resides—across structured databases and unstructured data (files, flat files, etc.) in on‑prem and cloud environments .</p>
+<p>Supported Platforms: Covers major environments such as AWS RDS (MySQL, PostgreSQL, SQL Server, Oracle), MongoDB, IBM Db2 (Linux/UNIX/Windows, z/OS, i), Informix, SAP HANA, Teradata, Netezza, FTP/SMB/HTTP repositories, and more.</p>
+<h3 id="classification-workflow">
+  Classification Workflow:
+  <a class="anchor" href="#classification-workflow">#</a>
+</h3>
+<ul>
+<li>Use Guardium appliance to connect via JDBC to data sources</li>
+<li>Enumerate tables, views, synonyms</li>
+<li>Sample data and match against classification rules (regex, exact-match, metadata)</li>
+<li>Trigger rule-specific actions (e.g. tagging, alerts, reporting)</li>
+<li>Repeat across defined data sources</li>
+</ul>
+<h3 id="rule-builder-tools-use-either">
+  Rule Builder Tools: Use either:
+  <a class="anchor" href="#rule-builder-tools-use-either">#</a>
+</h3>
+<ul>
+<li>End-to-end wizard (simplified, quicker setup)</li>
+<li>Full Classification Policy Builder (max flexibility: define sources, rules, scheduling, actions)</li>
+</ul>
+<h3 id="accuracy--machine-learning">
+  Accuracy &amp; Machine Learning:
+  <a class="anchor" href="#accuracy--machine-learning">#</a>
+</h3>
+<p>Guardium Discover and Classify delivers ~98.6% accuracy on structured data and ~100% on unstructured, often enhanced by AI/ML pattern detection .</p>
+<h3 id="deliverables">
+  Deliverables:
+  <a class="anchor" href="#deliverables">#</a>
+</h3>
+<ul>
+<li>Inventory of sensitive columns/tables/files and locations</li>
+<li>Input into activity monitoring, generating sensitive‑object lists for DAM policies</li>
+<li>Classification reporting to support data governance and regulatory compliance</li>
+</ul>
+<h2 id="vulnerability-assessment-guardium-va">
+  Vulnerability Assessment (Guardium VA)
+  <a class="anchor" href="#vulnerability-assessment-guardium-va">#</a>
+</h2>
+<ul>
+<li>
+<p>Overview: Designed to assess security posture of data environments by identifying infrastructure and configuration vulnerabilities, and guiding remediation efforts</p>
+</li>
+<li>
+<p>Deployment Options: Available as part of Guardium Data Protection suite or as a standalone module for purely infrastructure scanning use cases</p>
+</li>
+<li>
+<p>Key Capabilities:
+** Scans databases, data warehouses, big‑data environments (on-prem and cloud)
+** Tests for weaknesses: missing patches, weak credentials, excessive privileges, unauthorized schema changes, and behavioral anomalies (e.g. unusual logins, account sharing)
+** Relies on benchmarks such as CIS, STIG, SCAP, and IBM-maintained rule sets
+** Supports behavior-based indicators (e.g. after‑hours activity, privilege anomalies)</p>
+</li>
+<li>
+<p>Recent Enhancements (late 2024 / early 2025):
+** Broader platform support: YugabyteDB 2.21, Neo4j 5.24, IBM Db2 13 for z/OS with CIS benchmarking, plus Oracle, Percona MySQL, Apache Cassandra, Postgres 15 etc.
+** Deeper ServiceNow integration enabling on‑demand rescans from ServiceNow UI
+** UI and performance improvements, expanded CIS/STIG coverage, improved scalability</p>
+</li>
+<li>
+<p>Workflow:
+** Credentialed, read-only scans (minimal load on systems)
+** Produce detailed reports: risk scores, benchmark violations, remediation steps
+** Provide dashboards tracking risk posture over time
+** Automate compliance reporting for standards like PCI DSS, HIPAA, SOX</p>
+</li>
+</ul>
+<h2 id="synergy-between-discovery--va">
+  Synergy Between Discovery &amp; VA
+  <a class="anchor" href="#synergy-between-discovery--va">#</a>
+</h2>
+<p>Guardium Discover and Classify equips VA with precise knowledge of where sensitive data resides, allowing prioritized vulnerability scanning on high-risk assets.</p>
+<p>Combined, they support risk-based prioritization: vulnerabilities tied to sensitive data surfaced first, guiding effective remediation.</p>
+<h2 id="best-practices">
+  Best Practices
+  <a class="anchor" href="#best-practices">#</a>
+</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Aspect</th>
+          <th style="text-align: left">Recommendation</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Discovery-first</td>
+          <td style="text-align: left">Always scan and classify before vulnerability assessment—know what data exists and where</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Rule Management</td>
+          <td style="text-align: left">Use well-defined regex or metadata-based rules; re-evaluate periodically for false positives</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Credentials</td>
+          <td style="text-align: left">Use least-privilege non-admin credentials for classification and VA to limit exposure</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Scan Frequency</td>
+          <td style="text-align: left">Schedule discovery and VA regularly; use ad-hoc scans after changes (e.g. new DB rollout or patch)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Benchmark Currency</td>
+          <td style="text-align: left">Keep DPS patches and benchmark definitions updated before each VA run</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Integration</td>
+          <td style="text-align: left">Leverage ServiceNow, SIEM, ITSM tools for automated ticketing and remediation workflows</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Governance Alignment</td>
+          <td style="text-align: left">Feed classification outputs into data governance and compliance frameworks (e.g. Collibra, Purview)</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="why-it-matters">
+  Why It Matters
+  <a class="anchor" href="#why-it-matters">#</a>
+</h2>
+<ul>
+<li>
+<p>Foundation for Data Governance: Classification supplies actionable inventory of sensitive data—essential for risk-based controls.</p>
+</li>
+<li>
+<p>Proactive Risk Identification: VA spots vulnerabilities before they’re exploited—especially in high-risk data assets.</p>
+</li>
+<li>
+<p>Compliance Support: Automatically supports audit evidence for GDPR, HIPAA, PCI, SOX, and other regulatory standards.</p>
+</li>
+<li>
+<p>Operational Efficiency: Integrated dashboards and automated remediation guidance reduce manual effort.</p>
+</li>
+</ul>
+<h2 id="community-insights">
+  Community Insights
+  <a class="anchor" href="#community-insights">#</a>
+</h2>
+<p>In practice, Guardium VA is widely acknowledged to apply to data-layer infrastructure—it doesn’t target broader system assets (like middleware or endpoints) unless integrated with tools like QRadar for extended coverage  . Also, keep Guardium’s DPS patches updated to ensure your tests reflect the latest CVEs and benchmarks .</p>
+<h2 id="summary">
+  Summary
+  <a class="anchor" href="#summary">#</a>
+</h2>
+<ul>
+<li>
+<p>Guardium Discover &amp; Classify: Automates sensitive data discovery across structured and unstructured sources, enabling accurate classification with high ML-backed accuracy.</p>
+</li>
+<li>
+<p>Guardium Vulnerability Assessment: Scans databases/data warehouses for infrastructure and behavioral vulnerabilities, benchmarked against CIS/STIG and CVE standards.</p>
+</li>
+<li>
+<p>Together, they provide a robust, integrated data security posture management system—combining visibility, risk assessment, compliance, and actionable remediation.</p>
+</li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#data-discovery--classification-discover-and-classify">Data Discovery &amp; Classification (Discover and Classify)</a>
+      <ul>
+        <li><a href="#classification-workflow">Classification Workflow:</a></li>
+        <li><a href="#rule-builder-tools-use-either">Rule Builder Tools: Use either:</a></li>
+        <li><a href="#accuracy--machine-learning">Accuracy &amp; Machine Learning:</a></li>
+        <li><a href="#deliverables">Deliverables:</a></li>
+      </ul>
+    </li>
+    <li><a href="#vulnerability-assessment-guardium-va">Vulnerability Assessment (Guardium VA)</a></li>
+    <li><a href="#synergy-between-discovery--va">Synergy Between Discovery &amp; VA</a></li>
+    <li><a href="#best-practices">Best Practices</a></li>
+    <li><a href="#why-it-matters">Why It Matters</a></li>
+    <li><a href="#community-insights">Community Insights</a></li>
+    <li><a href="#summary">Summary</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

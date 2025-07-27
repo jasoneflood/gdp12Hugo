@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Part 1 on GDP DB2 AWS</title>
+    <link>http://localhost:1313/part-1/</link>
+    <description>Recent content in Part 1 on GDP DB2 AWS</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/part-1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction &amp; Architecture</title>
+      <link>http://localhost:1313/part-1/activity/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/part-1/activity/</guid>
+      <description>&lt;h1 id=&#34;ibm-guardium-121--comprehensive-data-security-platform&#34;&gt;&#xD;&#xA;  IBM Guardium 12.1 – Comprehensive Data Security Platform&#xD;&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#ibm-guardium-121--comprehensive-data-security-platform&#34;&gt;#&lt;/a&gt;&#xD;&#xA;&lt;/h1&gt;&#xD;&#xA;&lt;h2 id=&#34;overview&#34;&gt;&#xD;&#xA;  Overview&#xD;&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#overview&#34;&gt;#&lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;IBM Guardium 12.1 is an enterprise-class data security and protection solution designed to help organizations safeguard sensitive data in databases, data warehouses, big data platforms, and cloud environments. As data security becomes increasingly critical in light of stringent compliance requirements like GDPR, HIPAA, SOX, and PCI-DSS, Guardium serves as a robust solution for monitoring, auditing, and protecting sensitive data across complex environments.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Introduction &amp; Architecture</title>
+      <link>http://localhost:1313/part-1/intro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/part-1/intro/</guid>
+      <description>&lt;h1 id=&#34;ibm-guardium-121--comprehensive-data-security-platform&#34;&gt;&#xD;&#xA;  IBM Guardium 12.1 – Comprehensive Data Security Platform&#xD;&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#ibm-guardium-121--comprehensive-data-security-platform&#34;&gt;#&lt;/a&gt;&#xD;&#xA;&lt;/h1&gt;&#xD;&#xA;&lt;h2 id=&#34;overview&#34;&gt;&#xD;&#xA;  Overview&#xD;&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#overview&#34;&gt;#&lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;IBM Guardium 12.1 is an enterprise-class data security and protection solution designed to help organizations safeguard sensitive data in databases, data warehouses, big data platforms, and cloud environments. As data security becomes increasingly critical in light of stringent compliance requirements like GDPR, HIPAA, SOX, and PCI-DSS, Guardium serves as a robust solution for monitoring, auditing, and protecting sensitive data across complex environments.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

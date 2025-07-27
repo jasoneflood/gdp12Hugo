@@ -4,5 +4,5 @@ title = 'GDP DB2 AWS'
 theme = 'hugo-book'
 
 [params]
-  BookSection = 'chapter1'
+  BookSection = '*'
   BookSearch = true

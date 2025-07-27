@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Part 2 on GDP DB2 AWS</title>
+    <link>http://localhost:1313/part-2/</link>
+    <description>Recent content in Part 2 on GDP DB2 AWS</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/part-2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DAM &amp; Policy Creation</title>
+      <link>http://localhost:1313/part-2/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/part-2/overview/</guid>
+      <description>&lt;h1 id=&#34;dam--policy-creation&#34;&gt;&#xD;&#xA;  DAM &amp;amp; Policy Creation&#xD;&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#dam--policy-creation&#34;&gt;#&lt;/a&gt;&#xD;&#xA;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;Guardium 12.1 supports DAM for new platforms, including Amazon Redshift, RDS for SQL Server, OpenSearch, Percona MySQL, YugabyteDB, PostgreSQL 16, Neo4j 5.x, MongoDB 7.x, and more via updated Linux UNIX STAPs.&lt;/p&gt;&#xA;&lt;p&gt;DAM supports both agent-based (STAPs) and agentless monitoring using connectors for cloud streams and database event streams. It supports real-time alerting and recording of database access across multiple deployment topologies (on premise, hybrid, cloud)&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

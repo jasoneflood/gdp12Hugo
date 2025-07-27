@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Here’s a detailed overview of Integrations and Automation in IBM Security Guardium 12.1, focusing on how Guardium connects with other tools, and how you can streamline workflows using built-in or external automation.
+
+  Guardium Integrations
+  #
+
+Guardium integrates with a wide range of enterprise security, operations, and governance platforms to centralize and extend data security operations.
+
+  Core Integration Types
+  #
+
+
+  
+      
+          Feature
+          Description
+      
+  
+  
+      
+          SIEM (e.g., QRadar)
+          Send real-time policy violations, VA findings, and audit data via syslog
+      
+      
+          ITSM (e.g., ServiceNow)
+          Open, update, and close tickets based on alerts or VA results
+      
+      
+          IAM (e.g., LDAP/AD)
+          Sync users/groups for access control and reporting
+      
+      
+          Data Governance (e.g., Collibra, WKC)
+          Share classification/tagging insights with governance catalogs
+      
+      
+          Data Lakes &amp; Analytics (e.g., Splunk, ELK)
+          Export logs for long-term storage or advanced analytics
+      
+      
+          Cloud Monitoring (e.g., AWS CloudTrail, Azure Monitor)
+          Correlate Guardium findings with cloud-native logs
+      
+  
+
+
+  Integration with IBM Ecosystem
+  #
+
+
+
+IBM QRadar SIEM
+Guardium can:
+** Send real-time alerts via syslog
+** Share vulnerability scan results and classifications
+** Enrich QRadar offenses with data-risk context">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/part-5/overview/">
+  <meta property="og:site_name" content="GDP DB2 AWS">
+  <meta property="og:title" content="Integrations & Automation">
+  <meta property="og:description" content="Here’s a detailed overview of Integrations and Automation in IBM Security Guardium 12.1, focusing on how Guardium connects with other tools, and how you can streamline workflows using built-in or external automation.
+Guardium Integrations#Guardium integrates with a wide range of enterprise security, operations, and governance platforms to centralize and extend data security operations.
+Core Integration Types#Feature Description SIEM (e.g., QRadar) Send real-time policy violations, VA findings, and audit data via syslog ITSM (e.g., ServiceNow) Open, update, and close tickets based on alerts or VA results IAM (e.g., LDAP/AD) Sync users/groups for access control and reporting Data Governance (e.g., Collibra, WKC) Share classification/tagging insights with governance catalogs Data Lakes &amp; Analytics (e.g., Splunk, ELK) Export logs for long-term storage or advanced analytics Cloud Monitoring (e.g., AWS CloudTrail, Azure Monitor) Correlate Guardium findings with cloud-native logs Integration with IBM Ecosystem#IBM QRadar SIEM Guardium can: ** Send real-time alerts via syslog ** Share vulnerability scan results and classifications ** Enrich QRadar offenses with data-risk context">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="part-5">
+<title>Integrations &amp; Automation | GDP DB2 AWS</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/part-5/overview/">
+<link rel="stylesheet" href="/book.min.d5e59cb0aa8d22a5813c62cd5e25d3d172489a369c61dc3f622ee96ae1ebb457.css" integrity="sha256-1eWcsKqNIqWBPGLNXiXT0XJImjacYdw/Yi7pauHrtFc=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.74c15aaed6b51db6b6eb0d414997ed918d42c87ca2aea0b1073b4dcac9193d3b.js" integrity="sha256-dMFarta1Hba26w1BSZftkY1CyHyirqCxBztNyskZPTs=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>GDP DB2 AWS</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Part 1</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-1/intro/" class="">Introduction &amp; Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-1/activity/" class="">Activity</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Part 2</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-2/overview/" class="">DAM &amp; Policy Creation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-2/activity/" class="">Activity</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Part 3</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-3/overview/" class="">Data Discovery &amp; VA</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-3/activity/" class="">Activity</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Part 4</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-4/overview/" class="">Access Controls &amp; Reports</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-4/activity/" class="">Activity</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Part 5</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-5/overview/" class="active">Integrations &amp; Automation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-5/activity/" class="">Activity</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Part 6</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-6/overview/" class="">Final Considerations</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Integrations &amp; Automation</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#guardium-integrations">Guardium Integrations</a>
+      <ul>
+        <li><a href="#core-integration-types">Core Integration Types</a></li>
+        <li><a href="#integration-with-ibm-ecosystem">Integration with IBM Ecosystem</a></li>
+        <li><a href="#external-api-integrations">External API Integrations</a></li>
+      </ul>
+    </li>
+    <li><a href="#guardium-automation-features">Guardium Automation Features</a></li>
+    <li><a href="#integration-with-external-automation-tools">Integration with External Automation Tools</a></li>
+    <li><a href="#real-world-automation-examples">Real-World Automation Examples</a></li>
+    <li><a href="#security-of-integrations">Security of Integrations</a></li>
+    <li><a href="#best-practices">Best Practices</a></li>
+    <li><a href="#summary">Summary</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><p>Here’s a detailed overview of Integrations and Automation in IBM Security Guardium 12.1, focusing on how Guardium connects with other tools, and how you can streamline workflows using built-in or external automation.</p>
+<h2 id="guardium-integrations">
+  Guardium Integrations
+  <a class="anchor" href="#guardium-integrations">#</a>
+</h2>
+<p>Guardium integrates with a wide range of enterprise security, operations, and governance platforms to centralize and extend data security operations.</p>
+<h3 id="core-integration-types">
+  Core Integration Types
+  <a class="anchor" href="#core-integration-types">#</a>
+</h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Feature</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">SIEM (e.g., QRadar)</td>
+          <td style="text-align: left">Send real-time policy violations, VA findings, and audit data via syslog</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">ITSM (e.g., ServiceNow)</td>
+          <td style="text-align: left">Open, update, and close tickets based on alerts or VA results</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">IAM (e.g., LDAP/AD)</td>
+          <td style="text-align: left">Sync users/groups for access control and reporting</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Data Governance (e.g., Collibra, WKC)</td>
+          <td style="text-align: left">Share classification/tagging insights with governance catalogs</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Data Lakes &amp; Analytics (e.g., Splunk, ELK)</td>
+          <td style="text-align: left">Export logs for long-term storage or advanced analytics</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Cloud Monitoring (e.g., AWS CloudTrail, Azure Monitor)</td>
+          <td style="text-align: left">Correlate Guardium findings with cloud-native logs</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="integration-with-ibm-ecosystem">
+  Integration with IBM Ecosystem
+  <a class="anchor" href="#integration-with-ibm-ecosystem">#</a>
+</h3>
+<ul>
+<li>
+<p>IBM QRadar SIEM
+Guardium can:
+** Send real-time alerts via syslog
+** Share vulnerability scan results and classifications
+** Enrich QRadar offenses with data-risk context</p>
+</li>
+<li>
+<p>IBM Security Verify / ISIM
+Can link user access provisioning/de-provisioning workflows to policy enforcement in Guardium.</p>
+</li>
+<li>
+<p>IBM Security Guardium Insights
+** Cloud-native companion product
+** Collects long-term Guardium logs for scalable analytics, policy management, and regulatory reporting</p>
+</li>
+<li>
+<p>Watson Knowledge Catalog (WKC)
+** Share sensitive data findings for enterprise governance
+** Enables central lineage, data quality, and compliance mapping</p>
+</li>
+</ul>
+<h3 id="external-api-integrations">
+  External API Integrations
+  <a class="anchor" href="#external-api-integrations">#</a>
+</h3>
+<p>Guardium provides REST APIs and CLI interfaces for automating:</p>
+<ul>
+<li>Policy install/update</li>
+<li>Data classification scans</li>
+<li>VA scans and exports</li>
+<li>User creation and access role updates</li>
+<li>Report generation and download</li>
+</ul>
+<p>Full API docs are accessible via:
+https://<!-- raw HTML omitted -->/api-docs</p>
+<h2 id="guardium-automation-features">
+  Guardium Automation Features
+  <a class="anchor" href="#guardium-automation-features">#</a>
+</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Feature</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Scheduler</td>
+          <td style="text-align: left">Run scans, install policies, export reports at defined intervals</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Email Alerts</td>
+          <td style="text-align: left">Trigger emails for policy violations or scan failures</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Syslog Forwarding</td>
+          <td style="text-align: left">Send events to SIEM or log collector in real time</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Ticketing (ServiceNow)</td>
+          <td style="text-align: left">Create tickets from policy alerts or VA issues, then track remediation</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Anomaly Detection</td>
+          <td style="text-align: left">Automatically detect behavioral anomalies (e.g. off-hours access)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Audit Process Automation</td>
+          <td style="text-align: left">Use pre-built compliance workflows (e.g., PCI, GDPR) for faster reporting</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="integration-with-external-automation-tools">
+  Integration with External Automation Tools
+  <a class="anchor" href="#integration-with-external-automation-tools">#</a>
+</h2>
+<ul>
+<li>
+<p>Ansible / Terraform
+Automate provisioning of Guardium agents, config files, and integration endpoints.</p>
+</li>
+<li>
+<p>Jenkins / CI/CD Pipelines
+Trigger Guardium scans or data masking tasks post-deployment.</p>
+</li>
+<li>
+<p>ServiceNow Integration</p>
+</li>
+</ul>
+<p>** Guardium VA creates vulnerabilities in ServiceNow
+** Security teams can resolve and trigger Guardium to rescan
+** Enables closed-loop remediation</p>
+<ul>
+<li>SOAR (e.g., IBM SOAR, Splunk Phantom)</li>
+</ul>
+<p>** Use Guardium alerts as incident triggers
+** Automate threat enrichment and response actions</p>
+<h2 id="real-world-automation-examples">
+  Real-World Automation Examples
+  <a class="anchor" href="#real-world-automation-examples">#</a>
+</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Scenario</th>
+          <th style="text-align: left">Automation Outcome</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">New database goes live</td>
+          <td style="text-align: left">Terraform script registers it with Guardium, schedules discovery + VA</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Policy violation (PHI access)</td>
+          <td style="text-align: left">Guardium sends alert to QRadar → triggers SOAR playbook → notify SecOps</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Vulnerability found in Oracle server</td>
+          <td style="text-align: left">Ticket created in ServiceNow → VA rescans after patch → ticket auto-closes</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">User removed from AD group</td>
+          <td style="text-align: left">Guardium auto-updates role access and disables monitoring for that user</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="security-of-integrations">
+  Security of Integrations
+  <a class="anchor" href="#security-of-integrations">#</a>
+</h2>
+<ul>
+<li>Supports TLS encryption, mutual authentication, API keys, and role-based access control for all integration points.</li>
+<li>All API activity is logged and auditable via standard Guardium audit trails.</li>
+</ul>
+<h2 id="best-practices">
+  Best Practices
+  <a class="anchor" href="#best-practices">#</a>
+</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Area</th>
+          <th style="text-align: left">tip</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Centralize Alerts</td>
+          <td style="text-align: left">Forward all real-time alerts to a SIEM like QRadar for incident correlation</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Automate Discovery</td>
+          <td style="text-align: left">Use scheduler or CI/CD triggers to classify data with every DB or schema change</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Policy Deployment</td>
+          <td style="text-align: left">Automate policy install via CLI/API after rules change or patch deployment</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">SOAR Readiness</td>
+          <td style="text-align: left">Normalize alert formats and ensure metadata tagging for downstream enrichment</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Security Review</td>
+          <td style="text-align: left">Regularly audit API keys and credentials used in automation pipelines</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="summary">
+  Summary
+  <a class="anchor" href="#summary">#</a>
+</h2>
+<ul>
+<li>Integrations connect Guardium to SIEMs, SOAR, ITSM, IAM, and governance tools for full-stack visibility and response.</li>
+<li>Automation features help you classify, assess, alert, and report with minimal human effort—crucial for large-scale compliance.</li>
+<li>Guardium supports REST APIs, CLI, scheduler, and ServiceNow workflows for flexible orchestration across your SecOps and DevOps pipelines.</li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#guardium-integrations">Guardium Integrations</a>
+      <ul>
+        <li><a href="#core-integration-types">Core Integration Types</a></li>
+        <li><a href="#integration-with-ibm-ecosystem">Integration with IBM Ecosystem</a></li>
+        <li><a href="#external-api-integrations">External API Integrations</a></li>
+      </ul>
+    </li>
+    <li><a href="#guardium-automation-features">Guardium Automation Features</a></li>
+    <li><a href="#integration-with-external-automation-tools">Integration with External Automation Tools</a></li>
+    <li><a href="#real-world-automation-examples">Real-World Automation Examples</a></li>
+    <li><a href="#security-of-integrations">Security of Integrations</a></li>
+    <li><a href="#best-practices">Best Practices</a></li>
+    <li><a href="#summary">Summary</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

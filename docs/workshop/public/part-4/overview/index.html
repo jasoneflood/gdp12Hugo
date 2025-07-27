@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  Access Controls in Guardium 12.1
+  #
+
+Guardium Access Control doesn’t act like a traditional firewall or identity manager—instead, it monitors and enforces data access policies based on observed activity across databases and other data stores.
+
+  Core Capabilities
+  #
+
+
+  
+      
+          Feature
+          Description
+      
+  
+  
+      
+          Access Policies
+          Define rules to allow/block actions based on user, object, time, location
+      
+      
+          Policy Enforcement
+          Uses STAP (S-TAP, G-TAP) agents to inspect traffic inline or out-of-band
+      
+      
+          Exception Handling
+          Supports granular exceptions, allowlisting, and auditing-only actions
+      
+      
+          Role Segregation
+          Assigns Guardium UI/admin access using built-in role-based access control
+      
+      
+          LDAP / AD Integration
+          Supports importing users/groups for policy enforcement and authentication
+      
+  
+
+
+  Example Use Cases
+  #
+
+
+Block DBA access to HR tables during non-business hours
+Alert on unauthorized access to credit card or PHI data
+Enforce least privilege across outsourced development environments
+Monitor contractor access to sensitive production data
+
+
+  Policy Components
+  #
+
+Guardium Access policies are made up of:">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/part-4/overview/">
+  <meta property="og:site_name" content="GDP DB2 AWS">
+  <meta property="og:title" content="Access Controls & Reports">
+  <meta property="og:description" content="Access Controls in Guardium 12.1#Guardium Access Control doesn’t act like a traditional firewall or identity manager—instead, it monitors and enforces data access policies based on observed activity across databases and other data stores.
+Core Capabilities#Feature Description Access Policies Define rules to allow/block actions based on user, object, time, location Policy Enforcement Uses STAP (S-TAP, G-TAP) agents to inspect traffic inline or out-of-band Exception Handling Supports granular exceptions, allowlisting, and auditing-only actions Role Segregation Assigns Guardium UI/admin access using built-in role-based access control LDAP / AD Integration Supports importing users/groups for policy enforcement and authentication Example Use Cases#Block DBA access to HR tables during non-business hours Alert on unauthorized access to credit card or PHI data Enforce least privilege across outsourced development environments Monitor contractor access to sensitive production data Policy Components#Guardium Access policies are made up of:">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="part-4">
+<title>Access Controls &amp; Reports | GDP DB2 AWS</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/part-4/overview/">
+<link rel="stylesheet" href="/book.min.d5e59cb0aa8d22a5813c62cd5e25d3d172489a369c61dc3f622ee96ae1ebb457.css" integrity="sha256-1eWcsKqNIqWBPGLNXiXT0XJImjacYdw/Yi7pauHrtFc=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.74c15aaed6b51db6b6eb0d414997ed918d42c87ca2aea0b1073b4dcac9193d3b.js" integrity="sha256-dMFarta1Hba26w1BSZftkY1CyHyirqCxBztNyskZPTs=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>GDP DB2 AWS</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Part 1</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-1/intro/" class="">Introduction &amp; Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-1/activity/" class="">Activity</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Part 2</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-2/overview/" class="">DAM &amp; Policy Creation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-2/activity/" class="">Activity</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Part 3</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-3/overview/" class="">Data Discovery &amp; VA</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-3/activity/" class="">Activity</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Part 4</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-4/overview/" class="active">Access Controls &amp; Reports</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-4/activity/" class="">Activity</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Part 5</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-5/overview/" class="">Integrations &amp; Automation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-5/activity/" class="">Activity</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Part 6</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-6/overview/" class="">Final Considerations</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Access Controls &amp; Reports</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#access-controls-in-guardium-121">Access Controls in Guardium 12.1</a>
+      <ul>
+        <li><a href="#core-capabilities">Core Capabilities</a></li>
+        <li><a href="#example-use-cases">Example Use Cases</a></li>
+        <li><a href="#policy-components">Policy Components</a></li>
+        <li><a href="#guardium-reporting-overview">Guardium Reporting Overview</a></li>
+        <li><a href="#key-report-categories">Key Report Categories</a></li>
+        <li><a href="#custom-report-creation">Custom Report Creation</a></li>
+        <li><a href="#role-based-access-control-rbac">Role-Based Access Control (RBAC)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h2 id="access-controls-in-guardium-121">
+  Access Controls in Guardium 12.1
+  <a class="anchor" href="#access-controls-in-guardium-121">#</a>
+</h2>
+<p>Guardium Access Control doesn’t act like a traditional firewall or identity manager—instead, it monitors and enforces data access policies based on observed activity across databases and other data stores.</p>
+<h3 id="core-capabilities">
+  Core Capabilities
+  <a class="anchor" href="#core-capabilities">#</a>
+</h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Feature</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Access Policies</td>
+          <td style="text-align: left">Define rules to allow/block actions based on user, object, time, location</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Policy Enforcement</td>
+          <td style="text-align: left">Uses STAP (S-TAP, G-TAP) agents to inspect traffic inline or out-of-band</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Exception Handling</td>
+          <td style="text-align: left">Supports granular exceptions, allowlisting, and auditing-only actions</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Role Segregation</td>
+          <td style="text-align: left">Assigns Guardium UI/admin access using built-in role-based access control</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">LDAP / AD Integration</td>
+          <td style="text-align: left">Supports importing users/groups for policy enforcement and authentication</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="example-use-cases">
+  Example Use Cases
+  <a class="anchor" href="#example-use-cases">#</a>
+</h3>
+<ul>
+<li>Block DBA access to HR tables during non-business hours</li>
+<li>Alert on unauthorized access to credit card or PHI data</li>
+<li>Enforce least privilege across outsourced development environments</li>
+<li>Monitor contractor access to sensitive production data</li>
+</ul>
+<h3 id="policy-components">
+  Policy Components
+  <a class="anchor" href="#policy-components">#</a>
+</h3>
+<p>Guardium Access policies are made up of:</p>
+<ul>
+<li>Rule sets: Conditions (who, what, where, when, how)</li>
+<li>Actions: Block, alert, log, quarantine, notify</li>
+<li>Exceptions: Whitelist logic for trusted access</li>
+<li>Classification: Used to create &ldquo;sensitive object groups&rdquo; in policies</li>
+</ul>
+<p>These are managed via the Policy Builder UI, and policies are assigned to Inspection Engines on database servers via Install Policy operations.</p>
+<h3 id="guardium-reporting-overview">
+  Guardium Reporting Overview
+  <a class="anchor" href="#guardium-reporting-overview">#</a>
+</h3>
+<p>Reporting in Guardium gives you visibility into all monitored activities, violations, risks, and trends. It’s a critical part of compliance, audit, and incident response.</p>
+<p>Types of Reports</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Report Type</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Predefined Reports</td>
+          <td style="text-align: left">Out-of-the-box templates for compliance, activity, violations, access, etc.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Custom Reports</td>
+          <td style="text-align: left">Built using Query Builder or SQL-based methods</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Scheduled Reports</td>
+          <td style="text-align: left">Sent automatically via email or stored on file systems</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Real-Time Alerts</td>
+          <td style="text-align: left">Alert reports tied to policy violations, shown in UI or sent externally</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="key-report-categories">
+  Key Report Categories
+  <a class="anchor" href="#key-report-categories">#</a>
+</h3>
+<ul>
+<li>Access Reports: Who accessed what, when, from where</li>
+<li>Exception Reports: Failed logins, denied access, policy violations</li>
+<li>User Activity: Login/logout reports, user privilege reports</li>
+<li>Sensitive Data Access: Based on classification policy tagging</li>
+<li>Policy Violation Logs: Triggered rule matches with context</li>
+<li>Vulnerability Assessment: Risk scoring and misconfiguration reports</li>
+</ul>
+<h3 id="custom-report-creation">
+  Custom Report Creation
+  <a class="anchor" href="#custom-report-creation">#</a>
+</h3>
+<ul>
+<li>Go to Reports &gt; Report Builder</li>
+<li>Choose Domain (e.g. Access, Session, Exceptions)</li>
+<li>Add columns and filters</li>
+<li>Save and publish report</li>
+<li>Add to Dashboards or schedule for delivery</li>
+</ul>
+<p>Advanced users can write SQL-based reports using Guardium’s GDM Schema, or export results in PDF, CSV, HTML, Excel formats.</p>
+<h3 id="role-based-access-control-rbac">
+  Role-Based Access Control (RBAC)
+  <a class="anchor" href="#role-based-access-control-rbac">#</a>
+</h3>
+<p>Guardium&rsquo;s internal user management allows you to assign:</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Role</th>
+          <th style="text-align: left">Access Priviledges</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Administrator</td>
+          <td style="text-align: left">Full access to configuration, policies, reports</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Auditor</td>
+          <td style="text-align: left">View reports, cannot modify configuration</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Policy Manager</td>
+          <td style="text-align: left">Create/edit policies, no admin access</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Report Manager</td>
+          <td style="text-align: left">Create/edit custom reports, manage schedules</td>
+      </tr>
+  </tbody>
+</table>
+<p>You can also integrate with Active Directory or LDAP to map user groups to these roles via Admin Console &gt; Access Management.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#access-controls-in-guardium-121">Access Controls in Guardium 12.1</a>
+      <ul>
+        <li><a href="#core-capabilities">Core Capabilities</a></li>
+        <li><a href="#example-use-cases">Example Use Cases</a></li>
+        <li><a href="#policy-components">Policy Components</a></li>
+        <li><a href="#guardium-reporting-overview">Guardium Reporting Overview</a></li>
+        <li><a href="#key-report-categories">Key Report Categories</a></li>
+        <li><a href="#custom-report-creation">Custom Report Creation</a></li>
+        <li><a href="#role-based-access-control-rbac">Role-Based Access Control (RBAC)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

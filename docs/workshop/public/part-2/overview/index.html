@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  DAM &amp; Policy Creation
+  #
+
+Guardium 12.1 supports DAM for new platforms, including Amazon Redshift, RDS for SQL Server, OpenSearch, Percona MySQL, YugabyteDB, PostgreSQL 16, Neo4j 5.x, MongoDB 7.x, and more via updated Linux UNIX STAPs.
+DAM supports both agent-based (STAPs) and agentless monitoring using connectors for cloud streams and database event streams. It supports real-time alerting and recording of database access across multiple deployment topologies (on premise, hybrid, cloud)">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/part-2/overview/">
+  <meta property="og:site_name" content="GDP DB2 AWS">
+  <meta property="og:title" content="DAM & Policy Creation">
+  <meta property="og:description" content="DAM &amp; Policy Creation#Guardium 12.1 supports DAM for new platforms, including Amazon Redshift, RDS for SQL Server, OpenSearch, Percona MySQL, YugabyteDB, PostgreSQL 16, Neo4j 5.x, MongoDB 7.x, and more via updated Linux UNIX STAPs.
+DAM supports both agent-based (STAPs) and agentless monitoring using connectors for cloud streams and database event streams. It supports real-time alerting and recording of database access across multiple deployment topologies (on premise, hybrid, cloud)">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="part-2">
+<title>DAM &amp; Policy Creation | GDP DB2 AWS</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/part-2/overview/">
+<link rel="stylesheet" href="/book.min.d5e59cb0aa8d22a5813c62cd5e25d3d172489a369c61dc3f622ee96ae1ebb457.css" integrity="sha256-1eWcsKqNIqWBPGLNXiXT0XJImjacYdw/Yi7pauHrtFc=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.74c15aaed6b51db6b6eb0d414997ed918d42c87ca2aea0b1073b4dcac9193d3b.js" integrity="sha256-dMFarta1Hba26w1BSZftkY1CyHyirqCxBztNyskZPTs=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>GDP DB2 AWS</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Part 1</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-1/intro/" class="">Introduction &amp; Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-1/activity/" class="">Activity</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Part 2</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-2/overview/" class="active">DAM &amp; Policy Creation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-2/activity/" class="">Activity</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Part 3</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-3/overview/" class="">Data Discovery &amp; VA</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-3/activity/" class="">Activity</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Part 4</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-4/overview/" class="">Access Controls &amp; Reports</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-4/activity/" class="">Activity</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Part 5</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-5/overview/" class="">Integrations &amp; Automation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-5/activity/" class="">Activity</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Part 6</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/part-6/overview/" class="">Final Considerations</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>DAM &amp; Policy Creation</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#classification--sensitive-data-discovery">Classification &amp; Sensitive Data Discovery</a></li>
+    <li><a href="#policy-creation--management">Policy Creation &amp; Management</a></li>
+    <li><a href="#rule-logic--order">Rule Logic &amp; Order</a></li>
+    <li><a href="#actions--alerts">Actions &amp; Alerts</a></li>
+    <li><a href="#analytics-outlier-mining--exclusions">Analytics, Outlier Mining &amp; Exclusions</a></li>
+    <li><a href="#vulnerability--configuration-assessment-va-cas-er">Vulnerability &amp; Configuration Assessment (VA, CAS, ER)</a></li>
+    <li><a href="#central-management--deployment">Central Management &amp; Deployment</a></li>
+    <li><a href="#best-practices--policy-tuning">Best Practices &amp; Policy Tuning</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="dam--policy-creation">
+  DAM &amp; Policy Creation
+  <a class="anchor" href="#dam--policy-creation">#</a>
+</h1>
+<p>Guardium 12.1 supports DAM for new platforms, including Amazon Redshift, RDS for SQL Server, OpenSearch, Percona MySQL, YugabyteDB, PostgreSQL 16, Neo4j 5.x, MongoDB 7.x, and more via updated Linux UNIX STAPs.</p>
+<p>DAM supports both agent-based (STAPs) and agentless monitoring using connectors for cloud streams and database event streams. It supports real-time alerting and recording of database access across multiple deployment topologies (on premise, hybrid, cloud)</p>
+<h2 id="classification--sensitive-data-discovery">
+  Classification &amp; Sensitive Data Discovery
+  <a class="anchor" href="#classification--sensitive-data-discovery">#</a>
+</h2>
+<p>Guardium provides resource discovery and classification via regex‑based, exact match, and metadata scanning across structured and unstructured data. Classification Process Builder (Discover → Classifications → Classification Process Builder) allows defining policies to discover sensitive values (e.g. credit card regex), assign data sources and schedule executions
+guardiumnotes.</p>
+<h2 id="policy-creation--management">
+  Policy Creation &amp; Management
+  <a class="anchor" href="#policy-creation--management">#</a>
+</h2>
+<p>Policy Builder (DAM Policy Setup)Policies are constructed in the Policy Builder interface, which organizes criteria into session-level, SQL-level, and other categories for clarity and ordering
+guardiumnotes. You define rules by selecting triggers such as activity type (e.g. SELECT, INSERT, DDL), user, object, time-of-day, IP, and sensitive columns. Guardium includes prebuilt compliance templates for PCI DSS, GDPR, HIPAA, SOX, CCPA that can be customized</p>
+<h2 id="rule-logic--order">
+  Rule Logic &amp; Order
+  <a class="anchor" href="#rule-logic--order">#</a>
+</h2>
+<p>Rules execute in specified order; you can copy, import, and reorder them to optimize policy performance and reduce false positives . Policy Analyzer (introduced in Guardium v11 and available in 12.1) provides visibility into which rules fired, which never fired, and helps tune heading level and ordering .</p>
+<h2 id="actions--alerts">
+  Actions &amp; Alerts
+  <a class="anchor" href="#actions--alerts">#</a>
+</h2>
+<p>You configure real‑time alert actions for rules: logs, email, SNMP, or integration to SIEM/SOAR. You can designate alert receivers and roles; after saving, notifications can be configured. For advanced deployments, Guardium supports Advanced DAM packages that add blocking/masking capabilities for prevention—not just detection.</p>
+<h2 id="analytics-outlier-mining--exclusions">
+  Analytics, Outlier Mining &amp; Exclusions
+  <a class="anchor" href="#analytics-outlier-mining--exclusions">#</a>
+</h2>
+<p>Active Threat Analytics and Outlier Mining detect anomalies and flag unusual behavior (e.g. off-hours access, massive queries) leveraging UEBA models. You can exclude known benign activity or sources (e.g. trusted applications, temp tables) from analytics mining. Exclusions can be time‑bound (future date ranges).</p>
+<h2 id="vulnerability--configuration-assessment-va-cas-er">
+  Vulnerability &amp; Configuration Assessment (VA, CAS, ER)
+  <a class="anchor" href="#vulnerability--configuration-assessment-va-cas-er">#</a>
+</h2>
+<p>Guardium VA scans databases for missing patches, weak configurations, excessive privilege use, failed logins, and compliance against standards (e.g. CIS, DISA STIG). Configuration Audit System (CAS) tracks changes to OS or DB config files, environment variables, scripts etc.
+Entitlement Reports (ER) aggregate user rights across databases to help enforce least privilege and access governance.</p>
+<h2 id="central-management--deployment">
+  Central Management &amp; Deployment
+  <a class="anchor" href="#central-management--deployment">#</a>
+</h2>
+<p>You manage multiple Collectors from a centralized Central Manager, including policy distribution, agent management, compliance schedules, and reports.</p>
+<p>Deployment can be done on-prem, containerized or cloud; S‑TAPs can be deployed via GIM or Kubernetes; advanced scaling with container orchestration supports elasticity.</p>
+<h2 id="best-practices--policy-tuning">
+  Best Practices &amp; Policy Tuning
+  <a class="anchor" href="#best-practices--policy-tuning">#</a>
+</h2>
+<p>Start with prebuilt templates, customize for your compliance frameworks, and refine using Policy Analyzer to remove idle rules and reorder high-volume triggers.</p>
+<p>Use outlier exclusions proactively to reduce noise—for example, exclude non-sensitive application queries or known batch jobs .</p>
+<p>Integrate Guardium with SIEM/SOAR tools to create actionable workflows and rapid incident response.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Feature</th>
+          <th>Key Aspects in Guardium 12.1</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Supported Platforms</td>
+          <td>Expanded support: Redshift, RDS, YugabyteDB, OpenSearch, etc.</td>
+      </tr>
+      <tr>
+          <td>DAM Policy Builder</td>
+          <td>Session/SQL criteria views, rule ordering, prebuilt templates</td>
+      </tr>
+      <tr>
+          <td>Classification</td>
+          <td>Sensitive-data discovery via regex/exact/metadata scanning</td>
+      </tr>
+      <tr>
+          <td>Analytics</td>
+          <td>Active Threat / Outlier mining with UEBA, exclusion management</td>
+      </tr>
+      <tr>
+          <td>Alerting &amp; Prevention</td>
+          <td>Real-time rules, blocking/masking with Advanced DAM</td>
+      </tr>
+      <tr>
+          <td>Vulnerability &amp; Config Assessment</td>
+          <td>VA, CAS, Entitlement Reports included</td>
+      </tr>
+      <tr>
+          <td>Central Management</td>
+          <td>Policy distribution and analytics from Central Manager</td>
+      </tr>
+  </tbody>
+</table>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#classification--sensitive-data-discovery">Classification &amp; Sensitive Data Discovery</a></li>
+    <li><a href="#policy-creation--management">Policy Creation &amp; Management</a></li>
+    <li><a href="#rule-logic--order">Rule Logic &amp; Order</a></li>
+    <li><a href="#actions--alerts">Actions &amp; Alerts</a></li>
+    <li><a href="#analytics-outlier-mining--exclusions">Analytics, Outlier Mining &amp; Exclusions</a></li>
+    <li><a href="#vulnerability--configuration-assessment-va-cas-er">Vulnerability &amp; Configuration Assessment (VA, CAS, ER)</a></li>
+    <li><a href="#central-management--deployment">Central Management &amp; Deployment</a></li>
+    <li><a href="#best-practices--policy-tuning">Best Practices &amp; Policy Tuning</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
