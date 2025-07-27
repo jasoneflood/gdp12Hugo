@@ -3,4 +3,4 @@ title: "Final Considerations"
 weight: 1
 ---
 
-# A Final Note From The Team
+# A final note from the team
