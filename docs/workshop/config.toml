@@ -1,0 +1,8 @@
+baseURL = 'http://localhost:1313/'
+languageCode = 'en-us'
+title = 'GDP DB2 AWS'
+theme = 'hugo-book'
+
+[params]
+  BookSection = 'chapter1'
+  BookSearch = true
