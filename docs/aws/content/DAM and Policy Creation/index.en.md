@@ -1,7 +1,8 @@
 ---
-title: "DAM & Policy Creation"
-weight: 1
+title: "DAM and Policy Creation"
+weight: 3
 ---
+
 
 # DAM & Policy Creation
 Guardium 12.1 supports DAM for new platforms, including Amazon Redshift, RDS for SQL Server, OpenSearch, Percona MySQL, YugabyteDB, PostgreSQL 16, Neo4j 5.x, MongoDB 7.x, and more via updated Linux UNIX STAPs.

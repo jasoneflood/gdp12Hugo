@@ -1,7 +1,8 @@
 ---
 title: "Access Controls & Reports"
-weight: 1
+weight: 5
 ---
+
 
 ## Access Controls in Guardium 12.1
 Guardium Access Control doesn’t act like a traditional firewall or identity manager—instead, it monitors and enforces data access policies based on observed activity across databases and other data stores.

@@ -1,0 +1,36 @@
+version: 2.0
+
+defaultLocaleCode: en-US
+localeCodes:
+  - en-US
+
+awsAccountConfig:
+  accountSources:
+    - workshop_studio
+    - customer_provided
+  # serviceLinkedRoles:
+  #   - ec2.amazonaws.com
+  participantRole:
+    # iamPolicies:
+    #   - static/iam_policy.json # Placeholder - To be changed in order to be workshop specific
+    managedPolicies:
+      - "arn:aws:iam::aws:policy/AdministratorAccess" # Placeholder - To be deleted before final publish
+    trustedPrincipals:
+      service:
+        - ec2.amazonaws.com # Placeholder
+        - lambda.amazonaws.com # Placeholder
+
+  regionConfiguration:
+    minAccessibleRegions: 1
+    maxAccessibleRegions: 1
+    accessibleRegions:
+      required:
+        - us-east-1
+    deployableRegions:
+      required:
+        - us-east-1
+
+infrastructure:
+  cloudformationTemplates:
+    - templateLocation: static/cf.json
+      label: IBM Guardium collector and IBM DB2 stack

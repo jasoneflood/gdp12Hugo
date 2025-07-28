@@ -1,5 +1,5 @@
 ---
-title: "Introduction & Architecture"
+title: "Introduction and Architecture"
 weight: 1
 ---
 

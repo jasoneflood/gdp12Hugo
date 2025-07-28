@@ -1,6 +1,6 @@
 ---
-title: "Integrations & Automation"
-weight: 1
+title: "Integrations and  Automation"
+weight: 4
 ---
 
 Here’s a detailed overview of Integrations and Automation in IBM Security Guardium 12.1, focusing on how Guardium connects with other tools, and how you can streamline workflows using built-in or external automation.

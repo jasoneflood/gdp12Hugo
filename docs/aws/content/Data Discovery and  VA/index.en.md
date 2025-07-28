@@ -1,7 +1,8 @@
 ---
-title: "Data Discovery & VA"
-weight: 1
+title: "Data Discovery and  VA"
+weight: 2
 ---
+
 
 ## Data Discovery & Classification (Discover and Classify)
 Core Purpose: Establish visibility into where sensitive or regulated data resides—across structured databases and unstructured data (files, flat files, etc.) in on‑prem and cloud environments .
