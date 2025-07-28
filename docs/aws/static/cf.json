@@ -1,0 +1,218 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "CloudFormation template for GDPDB2DEMO environment\n- VPC, subnets, IGW, route tables\n- Security group with inbound ports open\n- Two EC2 instances with Elastic IPs",
+  "Parameters": {
+    "Instance1Ami": {
+      "Type": "String",
+      "Default": "ami-07b379ce6b59935c9"
+    },
+    "Instance2Ami": {
+      "Type": "String",
+      "Default": "ami-0bd44caa425056c80"
+    },
+	"AvailabilityZoneIndex": {
+      "Type": "Number",
+      "Default": 0,
+      "Description": "Index of the AZ to use (0 = first AZ)"
+    }
+  },
+  "Resources": {
+    "GDPDB2DemoVPC": {
+      "Type": "AWS::EC2::VPC",
+      "Properties": {
+        "CidrBlock": "172.31.0.0/16",
+        "Tags": [
+          { "Key": "Name", "Value": "gdpdb2demo-vpc" },
+          { "Key": "Application", "Value": "GDPDB2DEMO" }
+        ]
+      }
+    },
+    "GDPDB2DemoSubnet1": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "VpcId": { "Ref": "GDPDB2DemoVPC" },
+        "CidrBlock": "172.31.41.0/24",
+        "MapPublicIpOnLaunch": true,
+        "AvailabilityZone": {
+          "Fn::Select": [
+            { "Ref": "AvailabilityZoneIndex" },
+            { "Fn::GetAZs": "" }
+          ]
+        },
+        "Tags": [
+          { "Key": "Name", "Value": "gdpdb2demo-subnet1" },
+          { "Key": "Application", "Value": "GDPDB2DEMO" }
+        ]
+      }
+    },
+    "GDPDB2DemoSubnet2": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "VpcId": { "Ref": "GDPDB2DemoVPC" },
+        "CidrBlock": "172.31.44.0/24",
+        "MapPublicIpOnLaunch": true,
+        "AvailabilityZone": {
+          "Fn::Select": [
+            { "Ref": "AvailabilityZoneIndex" },
+            { "Fn::GetAZs": "" }
+          ]
+        },
+        "Tags": [
+          { "Key": "Name", "Value": "gdpdb2demo-subnet2" },
+          { "Key": "Application", "Value": "GDPDB2DEMO" }
+        ]
+      }
+    },
+    "GDPDB2DemoInternetGateway": {
+      "Type": "AWS::EC2::InternetGateway",
+      "Properties": {
+        "Tags": [
+          { "Key": "Name", "Value": "gdpdb2demo-igw" },
+          { "Key": "Application", "Value": "GDPDB2DEMO" }
+        ]
+      }
+    },
+    "GDPDB2DemoVPCGatewayAttachment": {
+      "Type": "AWS::EC2::VPCGatewayAttachment",
+      "Properties": {
+        "VpcId": { "Ref": "GDPDB2DemoVPC" },
+        "InternetGatewayId": { "Ref": "GDPDB2DemoInternetGateway" }
+      }
+    },
+    "GDPDB2DemoRouteTable": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": { "Ref": "GDPDB2DemoVPC" },
+        "Tags": [
+          { "Key": "Name", "Value": "gdpdb2demo-rt" },
+          { "Key": "Application", "Value": "GDPDB2DEMO" }
+        ]
+      }
+    },
+    "GDPDB2DemoRoute": {
+      "Type": "AWS::EC2::Route",
+      "DependsOn": "GDPDB2DemoVPCGatewayAttachment",
+      "Properties": {
+        "RouteTableId": { "Ref": "GDPDB2DemoRouteTable" },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": { "Ref": "GDPDB2DemoInternetGateway" }
+      }
+    },
+    "GDPDB2DemoSubnet1RouteTableAssociation": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "SubnetId": { "Ref": "GDPDB2DemoSubnet1" },
+        "RouteTableId": { "Ref": "GDPDB2DemoRouteTable" }
+      }
+    },
+    "GDPDB2DemoSubnet2RouteTableAssociation": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "SubnetId": { "Ref": "GDPDB2DemoSubnet2" },
+        "RouteTableId": { "Ref": "GDPDB2DemoRouteTable" }
+      }
+    },
+    "GDPDB2DemoSecurityGroup": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "Allow inbound ports for SLP GDP DB2",
+        "VpcId": { "Ref": "GDPDB2DemoVPC" },
+        "SecurityGroupIngress": [
+          { "IpProtocol": "tcp", "FromPort": 22, "ToPort": 22, "CidrIp": "0.0.0.0/0" },
+          { "IpProtocol": "tcp", "FromPort": 80, "ToPort": 80, "CidrIp": "0.0.0.0/0" },
+          { "IpProtocol": "tcp", "FromPort": 443, "ToPort": 443, "CidrIp": "0.0.0.0/0" },
+          { "IpProtocol": "tcp", "FromPort": 8081, "ToPort": 8081, "CidrIp": "0.0.0.0/0" },
+          { "IpProtocol": "tcp", "FromPort": 8443, "ToPort": 8443, "CidrIp": "0.0.0.0/0" },
+          { "IpProtocol": "tcp", "FromPort": 8445, "ToPort": 8445, "CidrIp": "0.0.0.0/0" },
+          { "IpProtocol": "tcp", "FromPort": 8446, "ToPort": 8446, "CidrIp": "0.0.0.0/0" },
+          { "IpProtocol": "tcp", "FromPort": 16016, "ToPort": 16016, "CidrIp": "0.0.0.0/0" },
+          { "IpProtocol": "tcp", "FromPort": 16018, "ToPort": 16018, "CidrIp": "0.0.0.0/0" }
+        ],
+        "SecurityGroupEgress": [
+          {
+            "IpProtocol": "-1",
+            "FromPort": 0,
+            "ToPort": 0,
+            "CidrIp": "0.0.0.0/0"
+          }
+        ],
+        "Tags": [
+          { "Key": "Name", "Value": "gdpdb2demo-sg" },
+          { "Key": "Application", "Value": "GDPDB2DEMO" }
+        ]
+      }
+    },
+    "GDPDB2DemoInstance1": {
+      "Type": "AWS::EC2::Instance",
+      "Properties": {
+        "ImageId": { "Ref": "Instance1Ami" },
+        "InstanceType": "t3.xlarge",
+        "SubnetId": { "Ref": "GDPDB2DemoSubnet1" },
+        "PrivateIpAddress": "172.31.41.249",
+        "SecurityGroupIds": [{ "Ref": "GDPDB2DemoSecurityGroup" }],
+        "Tags": [
+          { "Key": "Name", "Value": "gdpdb2demo-instance-1" },
+          { "Key": "Application", "Value": "GDPDB2DEMO" }
+        ]
+      }
+    },
+    "GDPDB2DemoEIP1": {
+      "Type": "AWS::EC2::EIP",
+      "Properties": {
+        "Domain": "vpc",
+        "Tags": [
+          { "Key": "Name", "Value": "gdpdb2demo-eip-1" },
+          { "Key": "Application", "Value": "GDPDB2DEMO" }
+        ]
+      }
+    },
+    "GDPDB2DemoEIP1Association": {
+      "Type": "AWS::EC2::EIPAssociation",
+      "Properties": {
+        "InstanceId": { "Ref": "GDPDB2DemoInstance1" },
+        "AllocationId": { "Fn::GetAtt": ["GDPDB2DemoEIP1", "AllocationId"] }
+      }
+    },
+    "GDPDB2DemoInstance2": {
+      "Type": "AWS::EC2::Instance",
+      "Properties": {
+        "ImageId": { "Ref": "Instance2Ami" },
+        "InstanceType": "m5.2xlarge",
+        "SubnetId": { "Ref": "GDPDB2DemoSubnet2" },
+        "PrivateIpAddress": "172.31.44.78",
+        "SecurityGroupIds": [{ "Ref": "GDPDB2DemoSecurityGroup" }],
+        "Tags": [
+          { "Key": "Name", "Value": "gdpdb2demo-instance-2" },
+          { "Key": "Application", "Value": "GDPDB2DEMO" }
+        ]
+      }
+    },
+    "GDPDB2DemoEIP2": {
+      "Type": "AWS::EC2::EIP",
+      "Properties": {
+        "Domain": "vpc",
+        "Tags": [
+          { "Key": "Name", "Value": "gdpdb2demo-eip-2" },
+          { "Key": "Application", "Value": "GDPDB2DEMO" }
+        ]
+      }
+    },
+    "GDPDB2DemoEIP2Association": {
+      "Type": "AWS::EC2::EIPAssociation",
+      "Properties": {
+        "InstanceId": { "Ref": "GDPDB2DemoInstance2" },
+        "AllocationId": { "Fn::GetAtt": ["GDPDB2DemoEIP2", "AllocationId"] }
+      }
+    }
+  },
+  "Outputs": {
+    "Instance1PublicIP": {
+      "Description": "Public IP of instance 1",
+      "Value": { "Ref": "GDPDB2DemoEIP1" }
+    },
+    "Instance2PublicIP": {
+      "Description": "Public IP of instance 2",
+      "Value": { "Ref": "GDPDB2DemoEIP2" }
+    }
+  }
+}
