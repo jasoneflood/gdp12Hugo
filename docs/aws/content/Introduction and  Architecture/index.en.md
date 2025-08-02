@@ -3,9 +3,9 @@ title: "Introduction and Architecture"
 weight: 1
 ---
 
-# IBM Guardium 12.1 – Comprehensive Data Security Platform
+# IBM Guardium – Comprehensive Data Security Platform
 ## Overview
-IBM Guardium 12.1 is an enterprise-class data security and protection solution designed to help organizations safeguard sensitive data in databases, data warehouses, big data platforms, and cloud environments. As data security becomes increasingly critical in light of stringent compliance requirements like GDPR, HIPAA, SOX, and PCI-DSS, Guardium serves as a robust solution for monitoring, auditing, and protecting sensitive data across complex environments.
+IBM Guardium is an enterprise-class data security and protection solution designed to help organizations safeguard sensitive data in databases, data warehouses, big data platforms, and cloud environments. As data security becomes increasingly critical in light of stringent compliance requirements like GDPR, HIPAA, SOX, and PCI-DSS, Guardium serves as a robust solution for monitoring, auditing, and protecting sensitive data across complex environments.
 
 ## Architecture and Core Capabilities
 Guardium is typically deployed as an appliance (hardware, virtual, or container-based) that monitors data activity by capturing and analyzing network traffic. It uses a combination of sniffer-based and agent-based approaches to monitor database activities without significantly impacting performance.
@@ -24,8 +24,8 @@ Detect misconfigurations, unpatched software, and access policy weaknesses withi
 ### Access Control & Policy Enforcement
 Enforce fine-grained access policies, segregate duties, and monitor privileged user activities.
 
-### Data Masking & Encryption Support
-Enable protection of sensitive data at rest, in motion, and at runtime using tokenization, redaction, or native DBMS encryption.
+### Data Masking
+Enable protection of sensitive data at rest, in motion, and at runtime.
 
 ### Anomaly Detection
 Use behavioral analytics and machine learning to detect outliers in access patterns (e.g., time-of-day anomalies, volume spikes).
@@ -61,22 +61,4 @@ Guardium supports monitoring for cloud-native platforms (AWS, Azure, GCP) and hy
 
 ### 4. Database Activity Monitoring (DAM)
 The core of Guardium’s value lies in its Database Activity Monitoring, capturing all user activity, especially from privileged users like DBAs, and comparing them to established baselines or policies.
-
-### Simplified Network Architecture
-Below is a simplified deployment of IBM Guardium 12.1 monitoring a DB2 database server:
-
-+----------------------+        SQL Traffic         +----------------------+
-|                      |  <--------------------->  |                      |
-|   Guardium 12.1 VM   |     (Sniffer/Agent)       |     DB2 Database     |
-|     (Server 1)       |                           |     (Server 2)       |
-+----------------------+                           +----------------------+
-Server 1 hosts the Guardium appliance, which can be deployed as a virtual machine or container.
-
-Server 2 runs the DB2 database.
-
-Guardium monitors traffic using a network sniffer or lightweight S-TAP agent on the DB2 host.
-
-All activity (logins, SQL queries, DDL/DML changes) is logged and analyzed.
-
-This basic two-server setup can easily scale to include multiple database types across hybrid environments, with Guardium acting as a central audit and control layer.
 
