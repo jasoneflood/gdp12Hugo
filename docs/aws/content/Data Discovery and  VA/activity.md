@@ -52,4 +52,10 @@ This will generate an error message.
 ![setup](/static/images/part2/sql_result.png) 
 
 ### Step 8
-Now pat yourself on the back, we have generated an exception. We can now pivot to Guardium [GDP_URL] and verify it was picked up.
+Now pat yourself on the back, we have generated an exception. We can now pivot to Guardium [GDP_URL] and verify it was picked up, by leveraging the exception count tile in GDP.
+
+![setup](/static/images/part2/gdp_exceptionCount.png) 
+
+You can generate exceptions of all kinds with the 4 users (Polly, Liher, John and Jason) set up in SLP and verify the number of exceptions detected increases.
+
+![setup](/static/images/part2/gdp_Exception.png) 
