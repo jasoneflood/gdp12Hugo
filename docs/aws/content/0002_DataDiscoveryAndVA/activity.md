@@ -18,6 +18,7 @@ The password is slp.trial!
 
 SLP is a fully integrated database traffic toolkit, we have set up SLP with connections to the DB2 community edition deployed in this workshop. Once we log into SLP you are on the dashboard.
 ### Step 1
+
 ![setup](/static/images/part2/slp_dashboard.png) 
 
 ### Step 2

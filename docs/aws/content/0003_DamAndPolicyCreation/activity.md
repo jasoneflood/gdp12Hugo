@@ -40,24 +40,43 @@ We have now successfully generated traffic and we can now visit Guardium DAM rep
 When the report opens we can see the DDL activitiues, and Exceptions in the type distribution. But lets get a graph to work also.
 
 ![setup](/static/images/part3/8.png)  
+
 Return to SLP and click on the gears in the top nav.
 ![setup](/static/images/part3/9.png)  
-Validate that the users are still connected to the system.
-![setup](/static/images/part3/10.png)  
-Now click on the database icon in the top nav
+
+Validate that the users are still connected to the system.  
+![setup](/static/images/part3/10.png)   
+
+Now click on the database icon in the top nav  
+
 ![setup](/static/images/part3/11.png)  
-Click on the first query on the list of available queries.
+
+Click on the first query on the list of available queries.  
+
 ![setup](/static/images/part3/12.png) 
-Execute this query, it will generate an exception. 
+
+Execute this query, it will generate an exception.   
+
 ![setup](/static/images/part3/13.png)  
-Now change between all the available users on the list and submit the query. Then return to GDP.
+
+Now change between all the available users on the list and submit the query. Then return to GDP.  
+
 ![setup](/static/images/part3/14.png) 
-You will now see an error about bening unable to render data, click on edit mode. This will make the dashboard editable.   
+
+You will now see an error about bening unable to render data, click on edit mode. This will make the dashboard editable.     
+
 ![setup](/static/images/part3/15.png) 
-Click on the configuration icon on the exceptions per db user tile. 
+
+Click on the configuration icon on the exceptions per db user tile.   
+
 ![setup](/static/images/part3/16.png)  
-This will allow you to customize the chart.
+
+This will allow you to customize the chart.  
+
 ![setup](/static/images/part3/17.png)  
-Change the chart to be a line chart.
+
+Change the chart to be a line chart.  
+
 ![setup](/static/images/part3/18.png)  
+ 
 You will have now generated your DAM report with a graph of your activities.
