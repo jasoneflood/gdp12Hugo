@@ -1,12 +1,14 @@
 ---
-title: "AWS Workshop Template"
+title: "Guardium Data Protect on AWS"
 weight: 0
 ---
 
-![APN Logo](/static/aws-logo.png)
-
-# AWS WORKSHOP TEMPLATE
-
-This template is the default for creating workshop content for AWS Solutions Architecture. It is driven by Markdown, and provides an interactive experience for workshop attendees. The pages in this template provide examples for how to write your own content using the components available.
-
 ![logos](/static/images/logos.png)
+
+# Guardium Data Protect on AWS with DB2
+
+This beginner workshop is set out to get you up and running quickly with some of the fundamental capabilities of Guardium Data Protect on AWS. This is an entry level workshop, in which we discuss some core concepts that are essential to understanding the value of the technology. 
+
+This workshop deploys two entry points these are the Guardium Data Protect (GDP) service and the Scenario Launch Platform (SLP) to help guide you through the workshop and to reduce your overall work effort. Details of how to access these services, use these services are explained throughout the workshop.
+
+We hope you have fun, and most importantly understand how Guardium Data Protect on AWS can benefit you and your organisation.

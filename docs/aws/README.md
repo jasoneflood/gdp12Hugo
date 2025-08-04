@@ -1,4 +1,4 @@
-# Aws-workshop-template
+# Aws-sworkshop-template
 
 ## Repo structure
 
