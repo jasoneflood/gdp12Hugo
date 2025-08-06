@@ -83,5 +83,4 @@ In practice, Guardium VA is widely acknowledged to apply to data-layer infrastru
 
 * Together, they provide a robust, integrated data security posture management system—combining visibility, risk assessment, compliance, and actionable remediation.
 
-* For the purpose of this workshop we will explore a small fraction of these capabilities. It is important however that you are aware of what can be done. This workshop will leave you with a working 90 day version of GDP, so you can ofcourse continue to experiment with some self paced study into the above topics.
-
+* For the purpose of this workshop we will explore a small fraction of these capabilities. It is important however that you are aware of what can be done. This workshop will leave you with a working version of GDP for a period of time, so you can ofcourse continue to experiment with some self paced study into the above topics. 

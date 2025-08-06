@@ -64,4 +64,4 @@ Guardium supports monitoring for cloud-native platforms (AWS, Azure, GCP) and hy
 The core of Guardium’s value lies in its Database Activity Monitoring, capturing all user activity, especially from privileged users like DBAs, and comparing them to established baselines or policies.
 
 ## 3. Workshop activities
-For the purpose of this workshop we will explore a small fraction of these capabilities. It is important however that you are aware of what can be done. This workshop will leave you with a working 90 day version of GDP, so you can ofcourse continue to experiment with some self paced study into the above topics. 
+For the purpose of this workshop we will explore a small fraction of these capabilities. It is important however that you are aware of what can be done. This workshop will leave you with a working version of GDP for a period of time, so you can ofcourse continue to experiment with some self paced study into the above topics. 
