@@ -12,3 +12,6 @@ This beginner workshop is set out to get you up and running quickly with some of
 This workshop deploys two entry points these are the Guardium Data Protect (GDP) service and the Scenario Launch Platform (SLP) to help guide you through the workshop and to reduce your overall work effort. Details of how to access these services, use these services are explained throughout the workshop.
 
 We hope you have fun, and most importantly understand how Guardium Data Protect on AWS can benefit you and your organisation.
+
+
+[![Watch the video](https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg)](https://youtu.be/dQw4w9WgXcQ)

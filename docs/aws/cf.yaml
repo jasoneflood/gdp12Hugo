@@ -211,5 +211,5 @@ Outputs:
     Description: SLP Endpoint (Right click to open in a new tab)
     Value: !Sub http://${GDPDB2DemoEIP1}:80
   GuardiumCollectorURL:
-    Description: Gaurdium Endpoint (Right click to open in a new tab)
+    Description: Guardium Endpoint (Right click to open in a new tab)
     Value: !Sub https://${GDPDB2DemoEIP2}:8443

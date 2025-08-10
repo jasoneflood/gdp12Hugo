@@ -5,7 +5,7 @@ weight: 2
 
 # IBM Guardium 12 – Getting started
 
-There are two servers set up in a VPC configuration for this workshop. One server has Guardium Data Protect (GDP) deployed on it. The other server has DB2 community edition installed on it, as well as an opensource tool called Scenario Launch Platform (SLP), that you can read more about here: [https://github.com/IBM/CyberSkill/tree/main/ScenarioLaunchPlatform] should you wish.    
+There are two servers set up in a Virtual Private Cloud (VPC) configuration for this workshop. One server has Guardium Data Protection (GDP) deployed on it. The other server has DB2 community edition installed on it, as well as an opensource tool called Scenario Launch Platform (SLP), that you can read more about here: [https://github.com/IBM/CyberSkill/tree/main/ScenarioLaunchPlatform] should you wish.    
 
 ![setup](/static/images/part1/setup.png)  
 
@@ -25,7 +25,7 @@ Log into GDP by visiting [GDP_URL].  The username is admin. The password is AWS.
 ![licence](/static/images/part1/licence.png)
 
 ### Step 2
-This will bring you to a licence page. The GDP instance has been pre wired to the DB2 server, however the licence needs to be added in order for the two services to speak to each other. Your 90 day trial licence was sent to you when you signed up to the workshop. There are infact two licences that must be added. Start by copying and pasting the first licence key and clicking apply.  
+This will bring you to a licence page. The GDP instance has been pre wired to the DB2 server, however the licence needs to be added in order for the two services to speak to each other. Your 90 day trial licence was sent to you when you signed up to the workshop. There are infact two licences that must be added. Start by copying and pasting the base licence key and clicking apply. You must start by adding the base licence first. 
 
 ![addLicence](/static/images/part1/addLicence.png)
 
@@ -40,7 +40,10 @@ This will briefly log you out, and bring you back to the home screen where it wi
 ![licenceLeft](/static/images/part1/licenceLeft.png)
 
 ### Step 5
-You now must repeat this process again for the second licence. It is the exact same process as before. Each licence activates a different set of functionality in the workshop GDP. So it is important to ensure that both licences have been applied.    
+You now must repeat this process again for the second append licence. It is the exact same process as before. Each licence activates a different set of functionality in the workshop GDP. So it is important to ensure that both licences have been applied.    
+
+#### Note
+You will see some errors associated with certificates and updates once you have added the licences. These errors occur because we are using a trial licence. These errors can be ignored.
 
 ## Task 2 Validating setup.
 Once both licences have been applied the GDP is now fully functional. At this point it is important to validate that the GDP instance is talking with the DB2 instance.  This is achieved by returning to the search bar in the top right and this time enter into search "stap control" and clicking S-TAP Control.   

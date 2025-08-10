@@ -9,6 +9,8 @@ Core Purpose: Establish visibility into where sensitive or regulated data reside
 
 Supported Platforms: Covers major environments such as AWS RDS (MySQL, PostgreSQL, SQL Server, Oracle), MongoDB, IBM Db2 (Linux/UNIX/Windows, z/OS, i), Informix, SAP HANA, Teradata, Netezza, FTP/SMB/HTTP repositories, and more.
 
+For full details follow this link: https://ibm.github.io/guardium-supported-datasources/
+
 ### 1.1 Classification Workflow:
 
 * Use Guardium appliance to connect via JDBC to data sources
@@ -17,9 +19,9 @@ Supported Platforms: Covers major environments such as AWS RDS (MySQL, PostgreSQ
 * Trigger rule-specific actions (e.g. tagging, alerts, reporting)
 * Repeat across defined data sources 
 
-### 1.2 Rule Builder Tools: Use either:
+### 1.2 Rule Builder Tools
 
-* End-to-end wizard brings a simplified and quicker setup)
+* End-to-end wizard brings a simplified and quicker setup
 * Full Classification Policy Builder gives increased flexibility. Helping to define sources, rules, scheduling, actions. 
 
 ### 1.3 Accuracy & Machine Learning: 
@@ -35,16 +37,16 @@ Guardium Discover and Classify delivers high accuracy on structured and unstruct
 * Overview: Designed to assess security posture of data environments by identifying infrastructure and configuration vulnerabilities, and guiding remediation efforts 
 * Deployment Options: Available as part of Guardium Data Protection suite or as a standalone module for purely infrastructure scanning use cases 
 * Key Capabilities:
-** Scans databases, data warehouses and big‑data environments.
-** Tests for weaknesses such as missing patches, weak credentials, excessive privileges, unauthorized schema changes, and behavioral anomalies (e.g. unusual logins, account sharing) 
-** Relies on benchmarks such as CIS, STIG, SCAP, and IBM-maintained rule sets 
-** Supports behavior-based indicators (e.g. after‑hours activity, privilege anomalies) 
-** Broader platform support 
-** UI and performance improvements, expanded CIS/STIG coverage and improved scalability 
-** Credentialed, read-only scans (minimal load on systems)
-** Produce detailed reports: risk scores, benchmark violations, remediation steps
-** Provide dashboards tracking risk posture.
-** Automate compliance reporting for standards like PCI DSS, HIPAA, SOX 
+  ** Scans databases, data warehouses and big‑data environments.  
+  ** Tests for weaknesses such as missing patches, weak credentials, excessive privileges, unauthorized schema changes, and behavioral anomalies (e.g. unusual logins, account sharing)   
+  ** Relies on benchmarks such as CIS, STIG, SCAP, and IBM-maintained rule sets   
+  ** Supports behavior-based indicators (e.g. after‑hours activity, privilege anomalies)   
+  ** Broader platform support   
+  ** UI and performance improvements, expanded CIS/STIG coverage and improved scalability   
+  ** Credentialed, read-only scans (minimal load on systems)  
+  ** Produce detailed reports: risk scores, benchmark violations, remediation steps  
+  ** Provide dashboards tracking risk posture.  
+  ** Automate compliance reporting for standards like PCI DSS, HIPAA, SOX   
 
 ### 2.1 Synergy Between Discovery & VA
 Guardium Discover and Classify equips VA with precise knowledge of where sensitive data resides, allowing prioritized vulnerability scanning on high-risk assets.

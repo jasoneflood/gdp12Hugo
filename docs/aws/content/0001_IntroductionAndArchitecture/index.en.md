@@ -22,7 +22,7 @@ Automatically scan and identify sensitive data such as personal, financial, and 
 Detect misconfigurations, unpatched software, and access policy weaknesses within your databases.
 
 ### 1.4. Access Control & Policy Enforcement
-Enforce fine-grained access policies, segregate duties, and monitor privileged user activities.
+Enforce fine-grained access policies, separation of duties, and monitor privileged user activities.
 
 ### 1.5. Data Masking
 Enable protection of sensitive data at rest, in motion, and at runtime.
@@ -31,7 +31,7 @@ Enable protection of sensitive data at rest, in motion, and at runtime.
 Use behavioral analytics and machine learning to detect outliers in access patterns (e.g., time-of-day anomalies, volume spikes).
 
 ### 1.7. Integration and Automation
-Guardium integrates seamlessly with enterprise security infrastructure:
+Guardium integrates seamlessly with enterprise security infrastructure.
 
 ### 1.8. SIEM Integration
 Compatible with tools like IBM QRadar, Splunk, and ArcSight for real-time alerting and centralized logging.
