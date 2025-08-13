@@ -9,7 +9,7 @@ Guardium supports DAM for many platforms, including Amazon Redshift, RDS for SQL
 
 DAM supports both agent-based (STAPs) and agentless monitoring using connectors for cloud streams and database event streams. It supports real-time alerting and recording of database access across multiple deployment topologies (on premise, hybrid, cloud)   
 
-For more information on Guardium Supported Datasources, visit here https://ibm.github.io/guardium-supported-datasources/
+For more information on Guardium supported datasources, visit here https://ibm.github.io/guardium-supported-datasources/
 
 
 ## 1.1 Classification & Sensitive Data Discovery

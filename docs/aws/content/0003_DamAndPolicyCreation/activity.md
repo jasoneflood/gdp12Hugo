@@ -3,7 +3,7 @@ title: "Activity"
 weight: 2
 ---
 
-# IBM Guardium – Basic DAM operations
+# IBM Guardium Data Protection – Basic DAM operations
 
 
 In this section we will explore some basic DAM capabilities. To do this we must first generate some traffic. We visit SLP and login.

@@ -3,7 +3,7 @@ title: "Getting started"
 weight: 2
 ---
 
-# IBM Guardium 12 – Getting started
+# IBM Guardium Data Protection – Getting started
 
 There are two servers set up in a Virtual Private Cloud (VPC) configuration for this workshop. One server has Guardium Data Protection (GDP) deployed on it. The other server has DB2 community edition installed on it, as well as an opensource tool called Scenario Launch Platform (SLP), that you can read more about here: [https://github.com/IBM/CyberSkill/tree/main/ScenarioLaunchPlatform] should you wish.    
 
@@ -11,7 +11,7 @@ There are two servers set up in a Virtual Private Cloud (VPC) configuration for 
 
 The DB2 community edition is pre wired to the GDP instance deployed in the VPC. The SLP tool is used to generate traffic on the DB2 community edition that GDP will report, and has been preset with all the connection and schema information necessary to run the workshop. 
 
-You can log into the workshops Guardium Data Protect by accessing this URL [GDP_URL]  
+You can log into the workshops Guardium Data Protection by accessing this URL [GDP_URL]  
 You can log into the workshops Scenario Launch Platform by accessing this URL [SLP_URL]  
 
 You will use both of these URLs during this workshop. You should not need to log into the servers themselves, however - details of how to do that should you wish are included in the closing section of the workshop.

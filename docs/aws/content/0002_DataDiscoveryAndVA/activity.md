@@ -3,7 +3,7 @@ title: "Generating data"
 weight: 2
 ---
 
-# IBM Guardium 12– Generating data
+# IBM Guardium Data Protection– Generating data
 
 As already mentioned this workshop leverages an opensource tool called Scenario Launch Platform (SLP) to generate events that GDP detects. You can read more about SLP here: [https://github.com/IBM/CyberSkill/tree/main/ScenarioLaunchPlatform].  
 

@@ -3,7 +3,7 @@ title: "Introduction and Architecture"
 weight: 1
 ---
 
-# IBM Guardium – Comprehensive Data Security Platform
+# IBM Guardium Data Protection – Comprehensive Data Security Platform
 ## Overview
 IBM Guardium is an enterprise-class data security and protection solution designed to help organizations safeguard sensitive data in databases, data warehouses, big data platforms, and cloud environments. As data security becomes increasingly critical in light of stringent compliance requirements like GDPR, HIPAA, SOX, and PCI-DSS, Guardium serves as a robust solution for monitoring, auditing, and protecting sensitive data across complex environments.
 

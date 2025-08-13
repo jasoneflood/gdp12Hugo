@@ -4,7 +4,7 @@ weight: 5
 ---
 
 
-# 1. Access Controls in Guardium
+# 1. Access Controls in Guardium Data Protection
 Guardium Access Control doesn’t act like a traditional firewall or identity manager—instead, it monitors and enforces data access policies based on observed activity across databases and other data stores.
 
 ## 1.1 Core Capabilities

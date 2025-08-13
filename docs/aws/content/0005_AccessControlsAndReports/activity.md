@@ -3,7 +3,7 @@ title: "Activity"
 weight: 2
 ---
 
-# IBM Guardium – Creating a Custom Dashboard.
+# IBM Guardium Data Protection – Creating a Custom Dashboard.
 Now that we have the system running, and we have generated some data - lets create a custom dashboard. This process is straight forward and GDP comes with pre-canned tiles that you can select to use easily. Start by clicking My Dashboards icon on the left nav, and then create new dashboard.  
 
 ![setup](/static/images/part5/1.png)  
