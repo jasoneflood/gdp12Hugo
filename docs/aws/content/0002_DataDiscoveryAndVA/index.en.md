@@ -36,7 +36,7 @@ Guardium Discover and Classify delivers high accuracy on structured and unstruct
 ## 2. Vulnerability Assessment (Guardium VA)
 * Overview: Designed to assess security posture of data environments by identifying infrastructure and configuration vulnerabilities, and guiding remediation efforts 
 * Deployment Options: Available as part of Guardium Data Protection suite or as a standalone module for purely infrastructure scanning use cases 
-* Key Capabilities:
+* Key Capabilities:  
   ** Scans databases, data warehouses and big‑data environments.  
   ** Tests for weaknesses such as missing patches, weak credentials, excessive privileges, unauthorized schema changes, and behavioral anomalies (e.g. unusual logins, account sharing)   
   ** Relies on benchmarks such as CIS, STIG, SCAP, and IBM-maintained rule sets   
