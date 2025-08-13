@@ -34,13 +34,11 @@ A list of potential reports can be added.  You are free to experiment here, but 
 * Execptions_per_user 
 * All Activities
 * DDL commands
-* Available VA tests
 * All Roles - User
 * DDL Activities
 * Available VA tests - detailed
 * Activity By Client IP
 * Create Commands Execution
-* Available VA tests
 * All Guardium Applications - Role
 
 ![setup](/static/images/part5/3.png)  

@@ -42,7 +42,7 @@ Now we edit this query so that it generates a database exception.
 ![setup](/static/images/part2/slp_editQuery.png) 
 
 ### Step 6
-Replace the text with the following, and hit run:   
+Replace the text with the following, and then hit run:   
 INSERT INTO crm.tbl_crm_accounts (Idx) values ('a');
 
 ![setup](/static/images/part2/error_query.png) 
@@ -53,10 +53,12 @@ This will generate an error message.
 ![setup](/static/images/part2/sql_result.png) 
 
 ### Step 8
-Now pat yourself on the back, we have generated an exception. We can now pivot to Guardium [GDP_URL] and verify it was picked up, by leveraging the exception count tile in GDP.
+Now pat yourself on the back, we have generated an exception. We can now pivot to Guardium [GDP_URL] and verify it was picked up, by leveraging the exception count tile in GDP.  
 
 ![setup](/static/images/part2/gdp_exceptionCount.png) 
 
-You can generate exceptions of all kinds with the 4 users (Polly, Liher, John and Jason) set up in SLP and verify the number of exceptions detected increases.
+You can generate exceptions of all kinds with the 4 users (Polly, Liher, John and Jason) set up in SLP and verify the number of exceptions detected increases. In this case an exception is an SQL statement that has incorrect syntex or references objects the user cannot access, because the objects themselves do not exist or the user does not have permission to access the object.
 
 ![setup](/static/images/part2/gdp_Exception.png) 
+
+At this point you have activiated your Guardium Data Protection, you have verified the connection between DB2 and GDP is established, and observed real-time monitoring capability of Guardium Data Protection with a simple use case.

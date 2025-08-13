@@ -41,17 +41,17 @@ Guardium Discover and Classify delivers high accuracy on structured and unstruct
   ** Tests for weaknesses such as missing patches, weak credentials, excessive privileges, unauthorized schema changes, and behavioral anomalies (e.g. unusual logins, account sharing)   
   ** Relies on benchmarks such as CIS, STIG, SCAP, and IBM-maintained rule sets   
   ** Supports behavior-based indicators (e.g. after‑hours activity, privilege anomalies)   
-  ** Broader platform support   
+  ** Broad platform support   
   ** UI and performance improvements, expanded CIS/STIG coverage and improved scalability   
   ** Credentialed, read-only scans (minimal load on systems)  
   ** Produce detailed reports: risk scores, benchmark violations, remediation steps  
   ** Provide dashboards tracking risk posture.  
   ** Automate compliance reporting for standards like PCI DSS, HIPAA, SOX   
 
-### 2.1 Synergy Between Discovery & VA
-Guardium Discover and Classify equips VA with precise knowledge of where sensitive data resides, allowing prioritized vulnerability scanning on high-risk assets.
+### 2.1 Synergy Between Discovery & Vulnerability Assessment (VA)
+Guardium's discovery and classification capability equips VA with precise knowledge of where sensitive data resides, allowing prioritized vulnerability scanning on high-risk assets.
 
-Combined, they support risk-based prioritization: vulnerabilities tied to sensitive data surfaced first, guiding effective remediation.
+Combined, they support risk-based prioritization. Identifying vulnerabilities tied to sensitive data, guiding effective remediation.
 
 ### 2.2 Best Practices
 
@@ -85,4 +85,4 @@ In practice, Guardium VA is widely acknowledged to apply to data-layer infrastru
 
 * Together, they provide a robust, integrated data security posture management system—combining visibility, risk assessment, compliance, and actionable remediation.
 
-* For the purpose of this workshop we will explore a small fraction of these capabilities. It is important however that you are aware of what can be done. This workshop will leave you with a working version of GDP for a period of time, so you can ofcourse continue to experiment with some self paced study into the above topics. 
+* For the purpose of this workshop we will explore a small fraction of these capabilities. It is important however that you are aware of what can be done. This workshop will leave you with a working version of GDP for a period of time, so you can of course continue to experiment with some self-paced study into the above topics. 

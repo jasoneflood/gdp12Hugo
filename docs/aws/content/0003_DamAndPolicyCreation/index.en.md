@@ -5,27 +5,27 @@ weight: 3
 
 
 # 1. DAM & Policy Creation
-Guardium supports DAM for new platforms, including Amazon Redshift, RDS for SQL Server, OpenSearch, Percona MySQL, YugabyteDB, PostgreSQL 16, Neo4j 5.x, MongoDB 7.x, and more via updated Linux UNIX STAPs.
+Guardium supports DAM for many platforms, including Amazon Redshift, RDS for SQL Server, OpenSearch, Percona MySQL, YugabyteDB, PostgreSQL 16, Neo4j 5.x, MongoDB 7.x, and more via updated Linux UNIX STAPs.
 
-DAM supports both agent-based (STAPs) and agentless monitoring using connectors for cloud streams and database event streams. It supports real-time alerting and recording of database access across multiple deployment topologies (on premise, hybrid, cloud) 
+DAM supports both agent-based (STAPs) and agentless monitoring using connectors for cloud streams and database event streams. It supports real-time alerting and recording of database access across multiple deployment topologies (on premise, hybrid, cloud)   
+
+For more information on Guardium Supported Datasources, visit here https://ibm.github.io/guardium-supported-datasources/
 
 
 ## 1.1 Classification & Sensitive Data Discovery
-Guardium provides resource discovery and classification via regex‑based, exact match, and metadata scanning across structured and unstructured data. Classification Process Builder (Discover → Classifications → Classification Process Builder) allows defining policies to discover sensitive values (e.g. credit card regex), assign data sources and schedule executions 
-guardiumnotes.
+Guardium provides resource discovery and classification via regex-based, exact match, and metadata scanning across structured and unstructured data. Classification Process Builder (Discover → Classifications → Classification Process Builder) allows defining policies to discover sensitive values (e.g. credit card).
 
 ## 1.2 Policy Creation & Management
-Policy Builder (DAM Policy Setup)Policies are constructed in the Policy Builder interface, which organizes criteria into session-level, SQL-level, and other categories for clarity and ordering 
-guardiumnotes. You define rules by selecting triggers such as activity type (e.g. SELECT, INSERT, DDL), user, object, time-of-day, IP, and sensitive columns. Guardium includes prebuilt compliance templates for PCI DSS, GDPR, HIPAA, SOX, CCPA that can be customized 
+Policy Builder (DAM Policy Setup) policies are constructed in the Policy Builder interface, which organizes criteria into session-level, SQL-level, and other categories for clarity and ordering. You define rules by selecting triggers such as activity type (e.g. SELECT, INSERT, DDL), user, object, time-of-day, IP, and sensitive columns. Guardium includes prebuilt compliance templates for PCI DSS, GDPR, HIPAA, SOX, CCPA that can be customized 
 
 ## 1.3 Rule Logic & Order
-Rules execute in specified order; you can copy, import, and reorder them to optimize policy performance and reduce false positives . Policy Analyzer (introduced in Guardium v11 and available in 12.1) provides visibility into which rules fired, which never fired, and helps tune heading level and ordering .
+Rules execute in the ospecified order. You can copy, import, and reorder them to optimize policy performance and reduce false positives . Policy Analyzer (introduced in Guardium v11 and available in 12.1) provides visibility into which rules fired, which never fired, and helps tune heading level and ordering .
 
 ## 1.4 Actions & Alerts
-You configure real‑time alert actions for rules: logs, email, SNMP, or integration to SIEM/SOAR. You can designate alert receivers and roles; after saving, notifications can be configured. For advanced deployments, Guardium supports Advanced DAM packages that add blocking/masking capabilities for prevention—not just detection.
+You configure real-time alert actions for rules: logs, email, SNMP, or integration to SIEM/SOAR. You can designate alert receivers and roles and the notifications can be configured. For advanced deployments, Guardium supports DAM packages that add blocking/masking capabilities for prevention, not just detection.
 
 ## 1.5 Analytics, Outlier Mining & Exclusions
-Active Threat Analytics and Outlier Mining detect anomalies and flag unusual behavior (e.g. off-hours access, massive queries) leveraging UEBA models. You can exclude known benign activity or sources (e.g. trusted applications, temp tables) from analytics mining. Exclusions can be time‑bound (future date ranges).
+Active Threat Analytics and Outlier Mining detect anomalies flag unusual behavior (e.g. off-hours access, massive queries) leveraging UEBA models. You can exclude known benign activity or sources (e.g. trusted applications, temp tables) from analytics mining. Exclusions can be time‑bound (future date ranges).
 
 ## 1.6 Vulnerability & Configuration Assessment (VA, CAS, ER)
 Guardium VA scans databases for missing patches, weak configurations, excessive privilege use, failed logins, and compliance against standards (e.g. CIS, DISA STIG). Configuration Audit System (CAS) tracks changes to OS or DB config files, environment variables, scripts etc.
@@ -34,7 +34,7 @@ Entitlement Reports (ER) aggregate user rights across databases to help enforce 
 ## 1.7 Central Management & Deployment
 You manage multiple Collectors from a centralized Central Manager, including policy distribution, agent management, compliance schedules, and reports.
 
-Deployment can be done on-prem, containerized or cloud; S‑TAPs can be deployed via GIM or Kubernetes; advanced scaling with container orchestration supports elasticity.
+Deployment can be done on-prem, containerized or cloud; S-TAPs can be deployed via (Guardium Installation  Manager) GIM or Kubernetes; advanced scaling with container orchestration supports elasticity.
 
 ## 1.8 Best Practices & Policy Tuning
 Start with prebuilt templates, customize for your compliance frameworks, and refine using Policy Analyzer to remove idle rules and reorder high-volume triggers.
@@ -54,4 +54,4 @@ Integrate Guardium with SIEM/SOAR tools to create actionable workflows and rapid
 | Central Management	        | Policy distribution and analytics from Central Manager     |
 
 # 2. Workshop activities
-For the purpose of this workshop we will explore a small fraction of these capabilities. It is important however that you are aware of what can be done. This workshop will leave you with a working version of GDP for a period of time, so you can ofcourse continue to experiment with some self paced study into the above topics. 
+For the purpose of this workshop we will explore a small fraction of these capabilities. It is important however that you are aware of what can be done. This workshop will leave you with a working version of GDP for a period of time, so you can of course continue to experiment with some self-paced study into the above topics. 
