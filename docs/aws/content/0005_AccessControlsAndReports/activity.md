@@ -48,6 +48,7 @@ Once these are added to the dashboard you can then save the dashboard as MyWorkS
 ![setup](/static/images/part5/4.png)  
 
 You can change the layout of the dashboard between one, two and three column to suit your preference.
+
 ![setup](/static/images/part5/5.png)  
 
 You have now created your own custom Guardium dashboard.

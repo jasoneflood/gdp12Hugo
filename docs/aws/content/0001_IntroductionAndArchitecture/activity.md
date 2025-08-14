@@ -11,16 +11,23 @@ There are two servers set up in a Virtual Private Cloud (VPC) configuration for 
 
 The DB2 community edition is pre wired to the GDP instance deployed in the VPC. The SLP tool is used to generate traffic on the DB2 community edition that GDP will report, and has been preset with all the connection and schema information necessary to run the workshop. 
 
-You can log into the workshops Guardium Data Protection by accessing this URL [GDP_URL]  
-You can log into the workshops Scenario Launch Platform by accessing this URL [SLP_URL]  
+You can log into your Guardium Data Protection by accessing the Event Dashboard, and accessing the URL associated with the GuardiumCollectorURL key in Event Outputs. This URL is unique to your instance.  
+You can log into your Scenario Launch Platform by accessing the Event Dashboard, and accessing the URL associated with the SLPURL key in Event Outputs. This URL is unique to your instance.  
 
-You will use both of these URLs during this workshop. You should not need to log into the servers themselves, however - details of how to do that should you wish are included in the closing section of the workshop.
+![setup](/static/images/URLs.png)  
+
+You will use both of these URLs during this workshop. You should not need to log into the servers themselves.
 
 
 ## Task 1 Setting up GDP.
 
 ### Step 1
-Log into GDP by visiting [GDP_URL].  The username is admin. The password is AWS.trial1! In the top corner type the word "licence" as seen in the image below.  
+Log into GDP by visiting the GuardiumCollectorURL in Event dashboard -> Event Outputs .  
+
+  The username is admin   
+  The password is AWS.trial1!   
+  
+In the top corner type the word "licence" as seen in the image below.  
 
 ![licence](/static/images/part1/licence.png)
 

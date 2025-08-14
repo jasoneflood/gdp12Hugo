@@ -7,7 +7,7 @@ weight: 2
 
 As already mentioned this workshop leverages an opensource tool called Scenario Launch Platform (SLP) to generate events that GDP detects. You can read more about SLP here: [https://github.com/IBM/CyberSkill/tree/main/ScenarioLaunchPlatform].  
 
-Lets start by visiting the SLP tool [SLP_URL]
+Lets start by visiting the SLP tool which is accessed by using the SLPURL in Event dashboard -> Event Outputs
 
 ![setup](/static/images/part2/slp_login.png)  
 
@@ -53,7 +53,7 @@ This will generate an error message.
 ![setup](/static/images/part2/sql_result.png) 
 
 ### Step 8
-Now pat yourself on the back, we have generated an exception. We can now pivot to Guardium [GDP_URL] and verify it was picked up, by leveraging the exception count tile in GDP.  
+Now pat yourself on the back, we have generated an exception. We can now pivot to Guardium instance (GuardiumCollectorURL in Event dashboard -> Event Outputs) and verify it was picked up, by leveraging the exception count tile in GDP.  
 
 ![setup](/static/images/part2/gdp_exceptionCount.png) 
 

@@ -6,23 +6,29 @@ weight: 2
 # IBM Guardium Data Protection – Basic DAM operations
 
 
-In this section we will explore some basic DAM capabilities. To do this we must first generate some traffic. We visit SLP and login.
+In this section we will explore some basic DAM capabilities. To do this we must first generate some traffic. We visit SLP (SLPURL in Event dashboard -> Event Outputs) and login.  
+
 ![setup](/static/images/part3/1.png)  
+
 username: admin  
-password: slp.trial!
+password: slp.trial!  
 
 
 
-Once logged in click on the story book icon in the top nav section.
-![setup](/static/images/part3/2.png)  
-The story book mode is a feature that allows different users to perform database operations in sequence.
+Once logged in click on the story book icon in the top nav section.  
+
+![setup](/static/images/part3/2.png)   
+
+The story book mode is a feature that allows different users to perform database operations in sequence.  
 
 The SLP deployed in this workshop has 4 stories pre defined.
+
 ![setup](/static/images/part3/3.png)  
 
 Run each story in turn. You do this by clicking on the run button. 
 
 When a story runs it will open a pop up and start to execute. You can see the user that is executing the command,and how many chapters are going to run. Leave the window open until the number of chapters described in the heading of the new window have completed. You can then close the window and proceed to the next story. Repeat this until all stories are complete.
+
 ![setup](/static/images/part3/4.png)  
 
 If you want to know the commands that each user is calling you can click the query button that is associated with each story chapter.
@@ -42,9 +48,11 @@ When the report opens we can see the DDL activitiues, and Exceptions in the type
 ![setup](/static/images/part3/8.png)  
 
 Return to SLP and click on the gears in the top nav.
+
 ![setup](/static/images/part3/9.png)  
 
-Validate that the users are still connected to the system by looking at the status column.  
+Validate that the users are still connected to the system by looking at the status column. 
+ 
 ![setup](/static/images/part3/10.png)   
 
 Now click on the database icon in the top nav  
