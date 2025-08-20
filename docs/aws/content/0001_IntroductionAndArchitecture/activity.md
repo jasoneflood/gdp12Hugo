@@ -16,7 +16,7 @@ You can log into your Scenario Launch Platform by accessing the Event Dashboard,
 
 ![setup](/static/images/URLs.png)  
 
-You will use both of these URLs during this workshop. You should not need to log into the servers themselves.
+::alert[You will use both of these URLs during this workshop. You should not need to log into the servers themselves.]
 
 
 ## Task 1 Setting up GDP.
@@ -24,15 +24,17 @@ You will use both of these URLs during this workshop. You should not need to log
 ### Step 1
 Log into GDP by visiting the GuardiumCollectorURL in Event dashboard -> Event Outputs .  
 
-  The username is admin   
-  The password is AWS.trial1!   
+  The username is [admin]{showCopyAction=true}  
+  The password is [AWS.trial1!]{showCopyAction=true}  
   
 In the top corner type the word "licence" as seen in the image below.  
 
 ![licence](/static/images/part1/licence.png)
 
 ### Step 2
-This will bring you to a licence page. The GDP instance has been pre wired to the DB2 server, however the licence needs to be added in order for the two services to speak to each other. Your 90 day trial licence was sent to you when you signed up to the workshop. There are infact two licences that must be added. Start by copying and pasting the base licence key and clicking apply. You must start by adding the base licence first. 
+This will bring you to a licence page. The GDP instance has been pre wired to the DB2 server, however the licence needs to be added in order for the two services to speak to each other. Your 90 day trial licence was sent to you when you signed up to the workshop.   
+
+::alert[There are infact two licences that must be added. Start by copying and pasting the base licence key and clicking apply. You must start by adding the base licence first.]
 
 ![addLicence](/static/images/part1/addLicence.png)
 
@@ -63,4 +65,21 @@ Once you are on the S-TAP Control screen, validate that the status is green.
 ![stapValidate](/static/images/part1/stapValidate.png)
 
 ### Step 2
-Pat yourself on the back and congratulations - you have now successfully set up your GDP workshop and can now begin experimenting with GDP and DB2.
+You have now successfully set up your GDP workshop and can now begin experimenting with GDP and DB2.
+
+
+::code[psql -h <your_aurora_endpoint_fqdn> -p 5432 -U postgres -W]{showCopyAction=true}
+
+When prompted for Password enter :code[Guardium123]{showCopyAction=true}
+
+If your database connection is successful, you should see the output as shown below:
+
+:::code
+psql (11.20, server 11.9)
+SSL connection (protocol: TLSv1.2, cipher: ECDHE-RSA-AES128-SHA, bits: 128,
+compression: off)
+Type "help" for help.
+postgres=>
+:::
+
+Enter :code[\q]{showCopyAction=true} to exit the *psql* prompt.

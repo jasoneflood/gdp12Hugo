@@ -1,16 +1,29 @@
 ---
-title: "Guardium Data Protection on AWS"
+title: "Guardium Data Protection on AWS with DB2"
 weight: 0
 ---
 
-![logos](/static/images/logos.png)
+![IBM AWS Logo](/static/images/ibm-aws-logo.png?classes=border)
 
 # Guardium Data Protection on AWS with DB2
 
-This beginner workshop is set out to get you up and running quickly with some of the fundamental capabilities of Guardium Data Protection on AWS. This is an entry level workshop, in which we discuss some core concepts that are essential to understanding the value of the technology. 
+## Introduction
+The **IBM Guardium data protection on AWS with DB2**  beginner workshop will provide hands-on guided learning experience focused on fundamental capabilities of **Guardium Data Protection** on AWS. This workshop will help attendees to learn how IBM and AWS products and services together can address security and compliance requirements.  
 
-This workshop deploys two entry points. These are the Guardium Data Protection (GDP) service and the Scenario Launch Platform (SLP) to help guide you through the workshop and to reduce your overall work effort. Details of how to access these services, use these services are explained throughout the workshop.
+## Business Problem
+Customers needs to Protect their data across their organization. Customers also have differing approaches towards how they would like to implement this. This beginner workshop gives a first look introduction into the types of activities IBM Guardium Data Protection can detect on AWS.
 
-We hope you have fun, and most importantly understand how Guardium Data Protection on AWS can benefit you and your organisation.
+## Target Audience
+CISO, Security specialists, Architects, Developers
 
+## What you will learn
+In this workshop we will demonstrate how easily we can **access real time data** concerning database activities using Guardium Data Protection. Attendees will learn how to generate traffic using an open source tool called Scenario Launch Platform (SLP). This traffic can be detected by Gaurdium Data Protection. Attendees will learn how to build their own custom dashboards so they can view the Guardium Data Protection output from the traffic they have generated. This workshop also provides optional reading material on Guardium Data Protection to help users to understand the context and capabilities of Gaurdium Data Protection so help them to experiment.
 
+## Desired Outcome
+This workshop will introduce attendees to the observation capabilities of Guardium Data Protection using the following IBM & AWS services:
+
+* [IBM Guardium Data Protection](https://www.ibm.com/products/guardium-data-protection)
+
+* [IBM DB2](https://www.ibm.com/products/db2)
+
+* [Amazon EKS](https://aws.amazon.com/eks/)
