@@ -1,6 +1,8 @@
 ---
-title: "DAM and Policy Creation"
-weight: 3
+title: "Database Activity Monitoring and Policy Creation"
+weight: 30
+chapter: true
+pre: "<b>3. </b>"
 ---
 
 
@@ -53,5 +55,12 @@ Integrate Guardium with SIEM/SOAR tools to create actionable workflows and rapid
 | Vulnerability & Config Assessment       | VA, CAS, Entitlement Reports included       |
 | Central Management	        | Policy distribution and analytics from Central Manager     |
 
-# 2. Workshop activities
+## Topics
+
+::children{depth=999}
+
+---
+
+## Workshop Activities
+
 For the purpose of this workshop we will explore a small fraction of these capabilities. It is important however that you are aware of what can be done. This workshop will leave you with a working version of GDP for a period of time, so you can of course continue to experiment with some self-paced study into the above topics. 

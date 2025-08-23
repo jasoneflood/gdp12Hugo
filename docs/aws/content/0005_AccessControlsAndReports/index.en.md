@@ -1,6 +1,8 @@
 ---
-title: "Access Controls & Reports"
-weight: 5
+title: "Access Controls and Reports"
+weight: 40
+chapter: true
+pre: "<b>4. </b>"
 ---
 
 
@@ -74,5 +76,12 @@ Guardium's internal user management allows you to assign:
 
 You can also integrate with Active Directory or LDAP to map user groups to these roles via Admin Console > Access Management.
 
-# 2. Workshop activities
-For the purpose of this workshop we will explore a small fraction of these capabilities. It is important however that you are aware of what can be done. This workshop will leave you with a working version of GDP for a period of time, so you can ofcourse continue to experiment with some self paced study into the above topics. 
+## Topics
+
+::children{depth=999}
+
+---
+
+## Workshop Activities
+
+For the purpose of this workshop we will explore a small fraction of these capabilities. It is important however that you are aware of what can be done. This workshop will leave you with a working version of GDP for a period of time, so you can of course continue to experiment with some self-paced study into the above topics. 

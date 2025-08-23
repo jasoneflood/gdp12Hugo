@@ -1,6 +1,8 @@
 ---
-title: "Data Discovery and  VA"
-weight: 2
+title: "Data Discovery and Vulnerability Assessment"
+weight: 20
+chapter: true
+pre: "<b>2. </b>"
 ---
 
 
@@ -78,11 +80,18 @@ Combined, they support risk-based prioritization. Identifying vulnerabilities ti
 ### 2.4 Community Insights
 In practice, Guardium VA is widely acknowledged to apply to data-layer infrastructure—it doesn’t target broader system assets (like middleware or endpoints) unless integrated with tools like QRadar for extended coverage  . Also, keep Guardium’s DPS patches updated to ensure your tests reflect the latest CVEs and benchmarks .
 
-### 3. Workshop activities
-* Guardium Discover & Classify: Automates sensitive data discovery across structured and unstructured sources, enabling accurate classification with high ML-backed accuracy.
+## Topics
 
-* Guardium Vulnerability Assessment: Scans databases/data warehouses for infrastructure and behavioral vulnerabilities, benchmarked against CIS/STIG and CVE standards.
+::children{depth=999}
 
-* Together, they provide a robust, integrated data security posture management system—combining visibility, risk assessment, compliance, and actionable remediation.
+---
 
-* For the purpose of this workshop we will explore a small fraction of these capabilities. It is important however that you are aware of what can be done. This workshop will leave you with a working version of GDP for a period of time, so you can of course continue to experiment with some self-paced study into the above topics. 
+## Workshop Activities
+
+* **Guardium Discover & Classify**: Automates sensitive data discovery across structured and unstructured sources, enabling accurate classification with high ML-backed accuracy.
+
+* **Guardium Vulnerability Assessment**: Scans databases/data warehouses for infrastructure and behavioral vulnerabilities, benchmarked against CIS/STIG and CVE standards.
+
+* **Together**, they provide a robust, integrated data security posture management system—combining visibility, risk assessment, compliance, and actionable remediation.
+
+For the purpose of this workshop we will explore a small fraction of these capabilities. It is important however that you are aware of what can be done. This workshop will leave you with a working version of GDP for a period of time, so you can of course continue to experiment with some self-paced study into the above topics. 

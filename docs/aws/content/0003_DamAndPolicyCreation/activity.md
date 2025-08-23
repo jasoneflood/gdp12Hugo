@@ -1,19 +1,30 @@
 ---
-title: "Activity"
-weight: 2
+title: "Basic DAM Operations"
+weight: 30
+chapter: false
 ---
 
-# IBM Guardium Data Protection – Basic DAM operations
+## Learning Objectives
+
+• Understand how to generate database traffic using SLP stories.
+
+• Learn to navigate Guardium DAM reports
+
+• Create and customize activity dashboards
 
 
-In this section we will explore some basic DAM capabilities. To do this we must first generate some traffic. We visit SLP (SLPURL in Event dashboard -> Event Outputs) and login.  
+In this section we will explore some basic DAM capabilities. To do this we must first generate some traffic.
+
+## Step 1: Login to SLP
+
+We visit SLP (SLPURL in Event dashboard -> Event Outputs) and login.  
 
 ![setup](/static/images/part3/1.png)  
 
-username: admin  
-password: slp.trial!  
+username: :code[admin]{showCopyAction=true}  
+password: :code[slp.trial!]{showCopyAction=true}  
 
-
+## Step 2: Access Story Book Mode
 
 Once logged in click on the story book icon in the top nav section.  
 
@@ -21,9 +32,13 @@ Once logged in click on the story book icon in the top nav section.
 
 The story book mode is a feature that allows different users to perform database operations in sequence.  
 
+## Step 3: Review Available Stories
+
 The SLP deployed in this workshop has 4 stories pre defined.
 
 ![setup](/static/images/part3/3.png)  
+
+## Step 4: Execute All Stories
 
 Run each story in turn. You do this by clicking on the run button. 
 
@@ -39,6 +54,8 @@ Each Story has a different number of chapters.
  
 ![setup](/static/images/part3/6.png)  
 
+## Step 5: Access DAM Activity Reports
+
 We have now successfully generated traffic and we can now visit Guardium DAM reports to see what has been generated. We do this by clicking on My Custom Dashboards, [DAM] Activity Reports.
 
 ![setup](/static/images/part3/7.png)  
@@ -47,6 +64,8 @@ When the report opens we can see the DDL activitiues, and Exceptions in the type
 
 ![setup](/static/images/part3/8.png)  
 
+## Step 6: Verify User Connections
+
 Return to SLP and click on the gears in the top nav.
 
 ![setup](/static/images/part3/9.png)  
@@ -54,6 +73,8 @@ Return to SLP and click on the gears in the top nav.
 Validate that the users are still connected to the system by looking at the status column. 
  
 ![setup](/static/images/part3/10.png)   
+
+## Step 7: Generate Additional Exceptions
 
 Now click on the database icon in the top nav  
 
@@ -68,6 +89,8 @@ Execute this query, it will generate an exception.
 ![setup](/static/images/part3/13.png)  
 
 Now change between all the available users on the list and submit the query. To change the user all you need to do is pick a different user from the dropdown. Once you have pressed the run button on each user, you can then return to the [DAM] Activity Reports screen in the GDP console.  
+
+## Step 8: Customize Dashboard
 
 ![setup](/static/images/part3/14.png) 
 
