@@ -7,10 +7,10 @@ Description: >-
 Parameters:
   Instance1Ami:
     Type: String
-    Default: ami-0c16834eea93645a6
+    Default: ami-0e285d5760c81e0c4
   Instance2Ami:
     Type: String 
-    Default: ami-0ef8a916d9e6a7178
+    Default: ami-0bd44caa425056c80
   AvailabilityZoneIndex:
     Type: Number
     Default: 0
@@ -99,32 +99,8 @@ Resources:
       VpcId: !Ref GDPDB2DemoVPC
       SecurityGroupIngress:
         - IpProtocol: tcp
-          FromPort: 22
-          ToPort: 22
-          CidrIp: 0.0.0.0/0
-        - IpProtocol: tcp  
-          FromPort: 80
-          ToPort: 80
-          CidrIp: 0.0.0.0/0
-        - IpProtocol: tcp
-          FromPort: 443
-          ToPort: 443
-          CidrIp: 0.0.0.0/0
-        - IpProtocol: tcp
-          FromPort: 8081
-          ToPort: 8081
-          CidrIp: 0.0.0.0/0
-        - IpProtocol: tcp
           FromPort: 8443
           ToPort: 8443
-          CidrIp: 0.0.0.0/0
-        - IpProtocol: tcp
-          FromPort: 8445
-          ToPort: 8445
-          CidrIp: 0.0.0.0/0
-        - IpProtocol: tcp
-          FromPort: 8446
-          ToPort: 8446
           CidrIp: 0.0.0.0/0
         - IpProtocol: tcp
           FromPort: 16016
@@ -144,6 +120,28 @@ Resources:
           Value: gdpdb2demo-sg
         - Key: Application
           Value: GDPDB2DEMO
+
+  GDPSLPDemoSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Allow inbound HTTP only for SLP GDP Demo
+      VpcId: !Ref GDPDB2DemoVPC
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0
+      SecurityGroupEgress:
+        - IpProtocol: -1
+          FromPort: 0
+          ToPort: 0
+          CidrIp: 0.0.0.0/0
+      Tags:
+        - Key: Name
+          Value: gdp-slp-demo-sg
+        - Key: Application
+          Value: GDPDB2DEMO
+
   GDPDB2DemoInstance1:
     Type: AWS::EC2::Instance
     Properties:
@@ -153,6 +151,7 @@ Resources:
       PrivateIpAddress: 172.31.41.249
       SecurityGroupIds: 
         - !Ref GDPDB2DemoSecurityGroup
+        - !Ref GDPSLPDemoSecurityGroup   # new SG added here
       Tags:
         - Key: Name
           Value: gdpdb2demo-instance-1
@@ -203,13 +202,13 @@ Resources:
 Outputs:
   Instance1PublicIP:
     Description: Public IP of instance 1
-    Value: !Ref GDPDB2DemoEIP1
+    Value: !GetAtt GDPDB2DemoEIP1.PublicIp
   Instance2PublicIP:
     Description: Public IP of instance 2 
-    Value: !Ref GDPDB2DemoEIP2
+    Value: !GetAtt GDPDB2DemoEIP2.PublicIp
   SLPURL:
     Description: SLP Endpoint (Right click to open in a new tab)
-    Value: !Sub http://${GDPDB2DemoEIP1}:80
+    Value: !Sub "http://${GDPDB2DemoEIP1.PublicIp}:80"
   GuardiumCollectorURL:
     Description: Guardium Endpoint (Right click to open in a new tab)
-    Value: !Sub https://${GDPDB2DemoEIP2}:8443
+    Value: !Sub "https://${GDPDB2DemoEIP2.PublicIp}:8443"
